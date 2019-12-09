@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 
 int main(int argc, const char * argv[]) {
+    
+    char zerro = '0';
+    
     @autoreleasepool {
         // insert code here...
         NSLog(@"Hello, World!");
