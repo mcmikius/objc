@@ -8,13 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+void myFunc (NSString * f) {
+    NSLog(@" %@ is strong", f);
+}
 
 int main(int argc, const char * argv[]) {
     
     @autoreleasepool {
         // insert code here...
         NSString * name = @"Arnold";
-        NSLog(@" %@ Schwarzenegger", name);
+        myFunc(name);
     }
     return 0;
 }
