@@ -7,25 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#define MAXSIZE 8000
 
 int main(int argc, const char * argv[]) {
     
-    typedef int proInt;
-    proInt x = 36;
-    x = x / 6;
-    
-    typedef enum { bannana, apple, orange } fruits;
-    
     @autoreleasepool {
         // insert code here...
-        
-        fruits juice = apple;
-        fruits iDontLike = orange;
-       
-        NSLog(@"juice = %i iDontLike %i", juice, iDontLike);
-        
-        
+        int a = MAXSIZE + 500;
+        a++;
+        NSLog(@"maxsize = %i", a);
+#if DEBUG
+        NSLog(@"The biggest of int = %i", INT_MAX);
+#endif
     }
     return 0;
 }
