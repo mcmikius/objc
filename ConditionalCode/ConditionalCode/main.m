@@ -8,8 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+int global = 3;
+
 void print(int value) {
-    value = value * 3;
+    global++;
     NSLog(@"Value = %i", value);
 }
 
@@ -19,6 +21,7 @@ int main(int argc, const char * argv[]) {
         
         for (int i = 1; i < 10; i++) {
             int foo = 55;
+            global--;
             print(foo);
             NSLog(@" foo = %i", foo);
         }
