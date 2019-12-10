@@ -11,16 +11,12 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
-        char alpha = 'd';
-        switch (alpha) {
-            case 'b': NSLog(@"It's b!");
-                break;
-            case 'c': NSLog(@"It's c!");
-                break;
-            case 'd': NSLog(@"It's d!");
-                break;
-            default: NSLog(@"It's not b, c, d!");
+        NSLog(@"Hello world!");
+        int i = 0;
+        while (i > 3) {
+            // do something
         }
-        return 0;
     }
+    return 0;
 }
+
