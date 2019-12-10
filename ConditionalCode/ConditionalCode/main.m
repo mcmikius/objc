@@ -12,7 +12,7 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
         for (int i = 1; i < 15; i++) {
-            if (i % 3 == 0) {
+            if (i % 3) {
                 continue;
             }
             NSLog(@"i = %i", i);
