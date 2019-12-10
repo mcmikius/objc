@@ -8,7 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-void loop(void);
+
+
+static void loop() {
+    for (int i = 1; i < 15; i++) {
+        if (i % 3) {
+            continue;
+        }
+        NSLog(@"i = %i", i);
+    }
+}
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -18,11 +27,3 @@ int main(int argc, const char * argv[]) {
     return 0;
 }
 
-void loop() {
-    for (int i = 1; i < 15; i++) {
-        if (i % 3 == 0) {
-            continue;
-        }
-        NSLog(@"i = %i", i);
-    }
-}
