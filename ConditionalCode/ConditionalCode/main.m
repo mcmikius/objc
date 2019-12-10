@@ -11,12 +11,13 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
-        char q = 'q';
-        int a = 10;
-        if (q == 'q' || a > 50) {
-            NSLog(@"Qu is Qu");
-        } else {
-            NSLog(@"Qu is not Qu");
+        char alpha = 'd';
+        if (alpha == 'b') {
+            NSLog(@"It's b !!!");
+        } else if (alpha == 'c') {
+            NSLog(@"It's not b it's c !!!");
+        } else if (alpha == 'd') {
+            NSLog(@"It's d !!!");
         }
     }
     return 0;
