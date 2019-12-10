@@ -12,7 +12,7 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
         int a = 5;
-        NSLog(@"a = %i", ++a);
+        NSLog(@"a = %i", a++);
     }
     return 0;
 }
