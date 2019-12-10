@@ -10,11 +10,18 @@
 
 
 int main(int argc, const char * argv[]) {
+    
+    typedef int proInt;
+    proInt x = 36;
+    x = x / 6;
+    
+    typedef enum { bannana, apple, orange } fruits;
+    
     @autoreleasepool {
         // insert code here...
-        enum fruits { bannana, apple, orange };
-        enum fruits juice = apple;
-        enum fruits iDontLike = orange;
+        
+        fruits juice = apple;
+        fruits iDontLike = orange;
        
         NSLog(@"juice = %i iDontLike %i", juice, iDontLike);
         
