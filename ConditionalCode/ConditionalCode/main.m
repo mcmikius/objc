@@ -11,11 +11,12 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
-        int a = 1;
-        do {
-            NSLog(@"a = %i", a);
-            a++;
-        } while (a < 10);
+        for (int i = 1; i < 15; i++) {
+            if (i % 3 == 0) {
+                continue;
+            }
+            NSLog(@"i = %i", i);
+        }
     }
     return 0;
 }
