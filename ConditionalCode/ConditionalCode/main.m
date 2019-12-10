@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-void loop();
+void loop(void);
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
