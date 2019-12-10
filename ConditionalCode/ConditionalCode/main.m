@@ -8,23 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
-int global = 3;
-
-void print(int value) {
-    global++;
-    NSLog(@"Value = %i", value);
-}
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
+        enum fruits { bannana, apple, orange };
+        enum fruits juice = apple;
+        enum fruits iDontLike = orange;
+       
+        NSLog(@"juice = %i iDontLike %i", juice, iDontLike);
         
-        for (int i = 1; i < 10; i++) {
-            int foo = 55;
-            global--;
-            print(foo);
-            NSLog(@" foo = %i", foo);
-        }
+        
     }
     return 0;
 }
