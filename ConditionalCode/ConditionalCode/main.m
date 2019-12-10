@@ -12,9 +12,12 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
-        int myInt = 100;
-        float myFloat = 7.2f;
-        double myDouble = 7.2;
+        float f = 3.14f;
+        double d = 3.14;
+        NSLog(@"f = %f", f);
+        NSLog(@"f = %e", f);
+        NSLog(@"d = %e", d);
+        NSLog(@"d = %g", d);
     }
     return 0;
 }
