@@ -8,14 +8,20 @@
 
 #import <Foundation/Foundation.h>
 
+void print(int value) {
+    value = value * 3;
+    NSLog(@"Value = %i", value);
+}
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
-        int a = 10;
-        int b = 4;
-        float result = (float) a / b;
-        NSLog(@"result = %f", result);
+        
+        for (int i = 1; i < 10; i++) {
+            int foo = 55;
+            print(foo);
+            NSLog(@" foo = %i", foo);
+        }
     }
     return 0;
 }
