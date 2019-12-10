@@ -9,20 +9,12 @@
 #import <Foundation/Foundation.h>
 
 
-
-static void loop() {
-    for (int i = 1; i < 15; i++) {
-        if (i % 3) {
-            continue;
-        }
-        NSLog(@"i = %i", i);
-    }
-}
-
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
-        loop();
+        int myInt = 100;
+        float myFloat = 7.2f;
+        double myDouble = 7.2;
     }
     return 0;
 }
