@@ -7,18 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#define MAXSIZE 8000
+
 
 int main(int argc, const char * argv[]) {
     
     @autoreleasepool {
         // insert code here...
-        int a = MAXSIZE + 500;
-        a++;
-        NSLog(@"maxsize = %i", a);
-#if DEBUG
-        NSLog(@"The biggest of int = %i", INT_MAX);
-#endif
+        NSString * name = @"Arnold";
+        NSLog(@" %@ Schwarzenegger", name);
     }
     return 0;
 }
