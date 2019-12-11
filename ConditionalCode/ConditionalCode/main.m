@@ -13,14 +13,13 @@ int main(int argc, const char * argv[]) {
     
     @autoreleasepool {
         // insert code here...
+        NSDate * myDate = [[NSDate alloc] init];
+        NSMutableArray * myArray = [[NSMutableArray alloc] initWithObjects:@"it", @"is Xcode", myDate, nil];
+        NSLog(@"The first element is %@", [myArray objectAtIndex:2]);
         
-        int array[5] = { 6, 55, 707, -6, 0 };
-        NSLog(@"The 3th is %i", array[2]);
-        
-        NSString * book[5] = {@"z", @"x", @"c", @"v", @"b"};
-        while (array[0]) {
-            NSLog(@"%@", book[array[0]--]);
-        }
+        [myArray addObject:@"Yeah!"];
+        [myArray removeObjectAtIndex:1];
+        NSLog(@"The first element is %@ and the length is %lu", [myArray objectAtIndex:2], [myArray count]);
     }
     return 0;
 }
