@@ -10,12 +10,16 @@
 
 @implementation myClass
 
--(void) simpleAction {
-    NSLog(@"I work!");
+-(int) alpha {
+    return alpha;
 }
 
--(int) add:(int)a to:(int)b {
-    return b + a;
+-(void) setAlpha:(int)a {
+    alpha = a;
+}
+
+-(void) alphaOut {
+    NSLog(@"alpha = %i", alpha);
 }
 
 @end
