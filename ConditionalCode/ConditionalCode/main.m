@@ -13,13 +13,10 @@ int main(int argc, const char * argv[]) {
     
     @autoreleasepool {
         // insert code here...
-        NSDate * myDate = [[NSDate alloc] init];
-        NSMutableArray * myArray = [[NSMutableArray alloc] initWithObjects:@"it", @"is Xcode", myDate, nil];
-        NSLog(@"The first element is %@", [myArray objectAtIndex:2]);
-        
-        [myArray addObject:@"Yeah!"];
-        [myArray removeObjectAtIndex:1];
-        NSLog(@"The first element is %@ and the length is %lu", [myArray objectAtIndex:2], [myArray count]);
+        NSMutableDictionary * aeroports = [ NSMutableDictionary dictionaryWithObjectsAndKeys:@"Zhulany", @"KIE", @"Boryspol", @"BOR",@"Dnipro", @"DNP",@"Kharkiv", @"KHA",nil];
+        [aeroports setObject:@"Gatwick" forKey:@"LGW"];
+        NSString * ap = @"DNP";
+        NSLog(@"%@ is %@", ap, [aeroports objectForKey:ap]);
     }
     return 0;
 }
