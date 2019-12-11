@@ -8,17 +8,33 @@
 
 #import <Foundation/Foundation.h>
 
+@interface car : NSObject {
+    @private
+    NSString * brand;
+    NSDate * productionDate;
+    
+    
+}
+
+- (void) print;
+
+@end
+
+@implementation car
+
+- (void) print {
+    NSLog(@" \n Brand is %@. \n Date of production is %@. \n", brand, productionDate);
+}
+
+@end
 
 int main(int argc, const char * argv[]) {
     
     @autoreleasepool {
         // insert code here...
-        NSString * name = @"Johannes Chrysostomus Wolfgangus Theophilus Mozart";
-        unsigned long count = [ name length ];
-        NSLog(@"The length of full Mozart's name is %lu", count);
         
-        NSDate * today = [NSDate date];
-        NSLog(@"Today is %@", today);
+        car * Lada = [[car alloc] init];
+        [Lada print];
         
     }
     return 0;

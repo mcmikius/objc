@@ -88,7 +88,7 @@
 		F3AE29F1239EBFFF0099F91C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1120;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Mykhailo Bondarenko";
 				TargetAttributes = {
 					F3AE29F8239EBFFF0099F91C = {
@@ -238,6 +238,7 @@
 		F3AE2A01239EBFFF0099F91C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GYWWW55376;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -248,6 +249,7 @@
 		F3AE2A02239EBFFF0099F91C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GYWWW55376;
 				ENABLE_HARDENED_RUNTIME = YES;
