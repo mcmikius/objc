@@ -7,14 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "simpleClass.h"
+#import "NSString+removeDigits.h"
 
 int main(int argc, const char * argv[]) {
     
     @autoreleasepool {
         // insert code here...
-        simpleClass * obj = [[simpleClass alloc] init];
-        NSLog(@"%@", obj);
+        NSString * string = @"123abc 678";
+        NSLog(@"%@", [string removeDigits]);
     }
     return 0;
 }

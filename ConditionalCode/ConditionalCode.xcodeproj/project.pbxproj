@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F361BE9423A1651D00AE9BFE /* simpleClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F361BE9323A1651D00AE9BFE /* simpleClass.m */; };
+		F361BE9723A1694000AE9BFE /* NSString+removeDigits.m in Sources */ = {isa = PBXBuildFile; fileRef = F361BE9623A1694000AE9BFE /* NSString+removeDigits.m */; };
 		F3AE29FD239EBFFF0099F91C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F3AE29FC239EBFFF0099F91C /* main.m */; };
 /* End PBXBuildFile section */
 
@@ -24,8 +24,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		F361BE9223A1651D00AE9BFE /* simpleClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = simpleClass.h; sourceTree = "<group>"; };
-		F361BE9323A1651D00AE9BFE /* simpleClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = simpleClass.m; sourceTree = "<group>"; };
+		F361BE9523A1694000AE9BFE /* NSString+removeDigits.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+removeDigits.h"; sourceTree = "<group>"; };
+		F361BE9623A1694000AE9BFE /* NSString+removeDigits.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+removeDigits.m"; sourceTree = "<group>"; };
 		F3AE29F9239EBFFF0099F91C /* ConditionalCode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ConditionalCode; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3AE29FC239EBFFF0099F91C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,8 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				F3AE29FC239EBFFF0099F91C /* main.m */,
-				F361BE9223A1651D00AE9BFE /* simpleClass.h */,
-				F361BE9323A1651D00AE9BFE /* simpleClass.m */,
+				F361BE9523A1694000AE9BFE /* NSString+removeDigits.h */,
+				F361BE9623A1694000AE9BFE /* NSString+removeDigits.m */,
 			);
 			path = ConditionalCode;
 			sourceTree = "<group>";
@@ -124,8 +124,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F361BE9423A1651D00AE9BFE /* simpleClass.m in Sources */,
 				F3AE29FD239EBFFF0099F91C /* main.m in Sources */,
+				F361BE9723A1694000AE9BFE /* NSString+removeDigits.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

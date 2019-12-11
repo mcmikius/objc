@@ -1,5 +1,5 @@
 //
-//  simpleClass.h
+//  removeDigits.h
 //  ConditionalCode
 //
 //  Created by Mykhailo Bondarenko on 11.12.2019.
@@ -8,10 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
 
-@interface simpleClass : NSObject
--(NSString *) description;
+@interface NSString (removeDigits)
+-(NSString *) removeDigits;
 @end
 
-NS_ASSUME_NONNULL_END
