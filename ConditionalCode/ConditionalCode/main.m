@@ -15,6 +15,7 @@ int main(int argc, const char * argv[]) {
         // insert code here...
         NSFileManager * fm = [[NSFileManager alloc] init];
         NSString * path = @"/Users/mykhailobondarenko/Developer/objc/README.md";
+        NSURL * testURL = [NSURL fileURLWithPath:path];
         if ([fm fileExistsAtPath:path]) {
             NSLog(@"I see it");
             NSDictionary * fAtt = [fm attributesOfItemAtPath:path error:nil];
