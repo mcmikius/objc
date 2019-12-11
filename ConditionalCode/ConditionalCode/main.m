@@ -13,19 +13,9 @@ int main(int argc, const char * argv[]) {
     
     @autoreleasepool {
         // insert code here...
-        NSFileManager * fm = [[NSFileManager alloc] init];
-        NSString * path = @"/Users/mykhailobondarenko/Developer/objc/README.md";
-        NSURL * testURL = [NSURL fileURLWithPath:path];
-        if ([fm fileExistsAtPath:path]) {
-            NSLog(@"I see it");
-            NSDictionary * fAtt = [fm attributesOfItemAtPath:path error:nil];
-            for (NSString * key in fAtt) {
-                NSLog(@"Attributes %@ IS %@", key, [fAtt objectForKey:key]);
-            }
-//            [fm moveItemAtPath:path toPath:@"/Users/mykhailobondarenko/Developer/objc/README.md" error:nil];
-        } else {
-            NSLog(@"I don't see it");
-        }
+        NSURL * myMain = [NSURL fileURLWithPath:@"/Users/mykhailobondarenko/Developer/objc/ConditionalCode/ConditionalCode/main.m"];
+        NSString * content = [NSString stringWithContentsOfURL:myMain encoding:NSUTF8StringEncoding error:nil];
+        NSLog(@"The text is %@", content);
     }
     return 0;
 }
