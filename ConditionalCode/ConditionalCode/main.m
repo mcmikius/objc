@@ -8,16 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
-void myFunc (NSString * f) {
-    NSLog(@" %@ is strong", f);
-}
 
 int main(int argc, const char * argv[]) {
     
     @autoreleasepool {
         // insert code here...
-        NSString * name = @"Arnold";
-        myFunc(name);
+        NSString * name = @"Johannes Chrysostomus Wolfgangus Theophilus Mozart";
+        unsigned long count = [ name length ];
+        NSLog(@"The length of full Mozart's name is %lu", count);
+        
+        NSDate * today = [NSDate date];
+        NSLog(@"Today is %@", today);
+        
     }
     return 0;
 }
