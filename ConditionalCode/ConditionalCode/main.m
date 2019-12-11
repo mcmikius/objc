@@ -13,10 +13,16 @@ int main(int argc, const char * argv[]) {
     
     @autoreleasepool {
         // insert code here...
-        NSMutableDictionary * aeroports = [ NSMutableDictionary dictionaryWithObjectsAndKeys:@"Zhulany", @"KIE", @"Boryspol", @"BOR",@"Dnipro", @"DNP",@"Kharkiv", @"KHA",nil];
+        NSMutableDictionary * aeroports = [ NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                           @"Zhulany", @"KIE",
+                                           @"Boryspol", @"BOR",
+                                           @"Dnipro", @"DNP",
+                                           @"Kharkiv", @"KHA",nil];
         [aeroports setObject:@"Gatwick" forKey:@"LGW"];
-        NSString * ap = @"DNP";
-        NSLog(@"%@ is %@", ap, [aeroports objectForKey:ap]);
+        for (NSString * aeroportsAbbrev in aeroports) {
+            NSLog(@"%@ is %@", aeroportsAbbrev, [aeroports objectForKey:aeroportsAbbrev]);
+        }
+        
     }
     return 0;
 }
