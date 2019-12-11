@@ -1,5 +1,5 @@
 //
-//  myClass.h
+//  simpleClass.h
 //  ConditionalCode
 //
 //  Created by Mykhailo Bondarenko on 11.12.2019.
@@ -8,14 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-@interface myClass : NSObject {
+NS_ASSUME_NONNULL_BEGIN
+
+@interface simpleClass : NSObject {
 @private
     int alpha;
-    int beta;
 }
-
--(void) alphaOut;
+-(id)initWithAlpha:(int) a;
 
 @property int alpha;
 
 @end
+
+NS_ASSUME_NONNULL_END

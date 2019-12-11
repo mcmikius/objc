@@ -7,18 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "myClass.h"
+#import "simpleClass.h"
 
 int main(int argc, const char * argv[]) {
     
     @autoreleasepool {
         // insert code here...
-        myClass * one = [[myClass alloc] init];
         
-        [ one setAlpha:7];
-        
-        NSLog(@"alpha is %i", [ one alpha]);
-        
+        simpleClass * one = [[simpleClass alloc] initWithAlpha:456];
+        NSLog(@"alpha = %i", one.alpha);
     }
     return 0;
 }
