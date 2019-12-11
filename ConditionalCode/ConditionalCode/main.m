@@ -7,12 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "simpleClass.h"
 
 int main(int argc, const char * argv[]) {
     
     @autoreleasepool {
         // insert code here...
-        
+        simpleClass * obj = [[simpleClass alloc] init];
+        NSLog(@"%@", obj);
     }
     return 0;
 }
