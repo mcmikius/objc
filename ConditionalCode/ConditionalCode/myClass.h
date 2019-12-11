@@ -16,8 +16,6 @@
 
 -(void) alphaOut;
 
--(int) alpha;
-
--(void) setAlpha: (int) a;
+@property int alpha;
 
 @end

@@ -10,13 +10,7 @@
 
 @implementation myClass
 
--(int) alpha {
-    return alpha;
-}
-
--(void) setAlpha:(int)a {
-    alpha = a;
-}
+@synthesize alpha;
 
 -(void) alphaOut {
     NSLog(@"alpha = %i", alpha);
