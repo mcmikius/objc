@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F361BE9123A1602400AE9BFE /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = F361BE9023A1602400AE9BFE /* Car.m */; };
 		F3AE29FD239EBFFF0099F91C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F3AE29FC239EBFFF0099F91C /* main.m */; };
 /* End PBXBuildFile section */
 
@@ -24,8 +23,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		F361BE8F23A1602400AE9BFE /* Car.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
-		F361BE9023A1602400AE9BFE /* Car.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
 		F3AE29F9239EBFFF0099F91C /* ConditionalCode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ConditionalCode; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3AE29FC239EBFFF0099F91C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,8 +58,6 @@
 			isa = PBXGroup;
 			children = (
 				F3AE29FC239EBFFF0099F91C /* main.m */,
-				F361BE8F23A1602400AE9BFE /* Car.h */,
-				F361BE9023A1602400AE9BFE /* Car.m */,
 			);
 			path = ConditionalCode;
 			sourceTree = "<group>";
@@ -124,7 +119,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F361BE9123A1602400AE9BFE /* Car.m in Sources */,
 				F3AE29FD239EBFFF0099F91C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
