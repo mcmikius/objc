@@ -12,6 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
+@property (weak, nonatomic) IBOutlet UIButton *buttonSave;
 
 @end
 
@@ -20,7 +21,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self.buttonSave addTarget:self action:@selector(save) forControlEvents:UIControlEventTouchUpInside];
 }
 
+- (void) save {
+    NSLog(@"save");
+}
 
 @end

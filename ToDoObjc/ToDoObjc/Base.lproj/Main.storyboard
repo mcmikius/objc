@@ -79,6 +79,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="MTz-vk-3dL"/>
                     <connections>
+                        <outlet property="buttonSave" destination="TVD-lm-QTH" id="wcK-AS-fod"/>
                         <outlet property="datePicker" destination="ZlQ-Wu-qrr" id="qcs-i3-I5f"/>
                         <outlet property="textField" destination="l3C-6p-AzZ" id="oll-hv-uvK"/>
                     </connections>
