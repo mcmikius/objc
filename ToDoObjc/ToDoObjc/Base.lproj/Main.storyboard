@@ -42,21 +42,50 @@
             </objects>
             <point key="canvasLocation" x="332" y="-282"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="oj9-0F-Fc0">
             <objects>
-                <viewController id="0A4-EN-ztR" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0A4-EN-ztR" customClass="DetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rnD-az-55E">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l3C-6p-AzZ">
+                                <rect key="frame" x="16" y="58" width="288" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZlQ-Wu-qrr">
+                                <rect key="frame" x="0.0" y="131" width="320" height="216"/>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TVD-lm-QTH">
+                                <rect key="frame" x="86" y="364" width="149" height="30"/>
+                                <state key="normal" title="Save"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gL1-ed-fVD" firstAttribute="trailing" secondItem="TVD-lm-QTH" secondAttribute="trailing" constant="85" id="JMq-XK-G5J"/>
+                            <constraint firstItem="ZlQ-Wu-qrr" firstAttribute="trailing" secondItem="gL1-ed-fVD" secondAttribute="trailing" id="Rbh-zK-Q5x"/>
+                            <constraint firstItem="ZlQ-Wu-qrr" firstAttribute="leading" secondItem="gL1-ed-fVD" secondAttribute="leading" id="U5U-A7-5NJ"/>
+                            <constraint firstItem="ZlQ-Wu-qrr" firstAttribute="top" secondItem="l3C-6p-AzZ" secondAttribute="bottom" constant="39" id="Z7w-Xk-6Xc"/>
+                            <constraint firstItem="l3C-6p-AzZ" firstAttribute="leading" secondItem="gL1-ed-fVD" secondAttribute="leading" constant="16" id="bDS-ym-c20"/>
+                            <constraint firstItem="l3C-6p-AzZ" firstAttribute="top" secondItem="gL1-ed-fVD" secondAttribute="top" constant="14" id="fyI-P1-klS"/>
+                            <constraint firstItem="gL1-ed-fVD" firstAttribute="trailing" secondItem="l3C-6p-AzZ" secondAttribute="trailing" constant="16" id="qdg-ZK-smh"/>
+                            <constraint firstItem="TVD-lm-QTH" firstAttribute="leading" secondItem="gL1-ed-fVD" secondAttribute="leading" constant="86" id="rz7-9w-fbH"/>
+                            <constraint firstItem="TVD-lm-QTH" firstAttribute="top" secondItem="ZlQ-Wu-qrr" secondAttribute="bottom" constant="17" id="zj2-0i-YE9"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gL1-ed-fVD"/>
                     </view>
                     <navigationItem key="navigationItem" id="MTz-vk-3dL"/>
+                    <connections>
+                        <outlet property="datePicker" destination="ZlQ-Wu-qrr" id="qcs-i3-I5f"/>
+                        <outlet property="textField" destination="l3C-6p-AzZ" id="oll-hv-uvK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7rh-og-csw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1303" y="-282"/>
+            <point key="canvasLocation" x="1301.25" y="-282.04225352112678"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OgX-JQ-KJa">
