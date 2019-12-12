@@ -8,7 +8,7 @@
 
 #import "DetailViewController.h"
 
-@interface DetailViewController ()
+@interface DetailViewController ()<UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
@@ -22,10 +22,26 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.buttonSave addTarget:self action:@selector(save) forControlEvents:UIControlEventTouchUpInside];
+    UITapGestureRecognizer * handleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleEndEditing)];
+    [self.view addGestureRecognizer:handleTap];
+}
+
+- (void) handleEndEditing {
+    [self.view endEditing:YES];
 }
 
 - (void) save {
     NSLog(@"save");
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if ([textField isEqual:self.textField]) {
+        [self.textField resignFirstResponder];
+    }
+    
+    
+    
+    return YES;
 }
 
 @end
