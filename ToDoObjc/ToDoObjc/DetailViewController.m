@@ -47,6 +47,7 @@
     formatter.dateFormat = @"HH:mm dd.MMMM.yyyy";
     NSString * eventDate = [formatter stringFromDate:self.eventDate];
     NSDictionary * dictionary = [[NSDictionary alloc] initWithObjectsAndKeys:eventInfo, @"eventInfo", eventDate, @"eventDate", nil];
+    
     UILocalNotification * notification = [[UILocalNotification alloc]init];
     notification.userInfo = dictionary;
     notification.timeZone = [NSTimeZone defaultTimeZone];
