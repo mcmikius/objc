@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 @property (weak, nonatomic) IBOutlet UIButton *buttonSave;
 
+
 @end
 
 @implementation DetailViewController
@@ -21,9 +22,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.datePicker.minimumDate = [NSDate date];
+    [self.datePicker addTarget:self action:@selector(datePickerValueChanged) forControlEvents:UIControlEventValueChanged];
+    
     [self.buttonSave addTarget:self action:@selector(save) forControlEvents:UIControlEventTouchUpInside];
+    
     UITapGestureRecognizer * handleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleEndEditing)];
     [self.view addGestureRecognizer:handleTap];
+}
+
+- (void) datePickerValueChanged {
+    self.eventDate = self.datePicker.date;
+    NSLog(@"date Picker %@", self.eventDate);
 }
 
 - (void) handleEndEditing {
