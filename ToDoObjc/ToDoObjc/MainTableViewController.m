@@ -63,7 +63,16 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    UILocalNotification * notification = [self.arrayEvents objectAtIndex:indexPath.row];
+    NSDictionary * dictionary = notification.userInfo;
+    
     DetailViewController * detailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DetailViewController"];
+    
+    detailViewController.eventInfo = [dictionary objectForKey:@"eventInfo"];
+    detailViewController.eventDate = notification.fireDate;
+    detailViewController.isDetail = YES;
+    
     [self.navigationController pushViewController:detailViewController animated:YES];
 }
 
