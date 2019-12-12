@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		F3827DA823A270130017B2E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3827DA723A270130017B2E4 /* AppDelegate.m */; };
 		F3827DAB23A270130017B2E4 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3827DAA23A270130017B2E4 /* SceneDelegate.m */; };
-		F3827DAE23A270130017B2E4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3827DAD23A270130017B2E4 /* ViewController.m */; };
 		F3827DB123A270130017B2E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3827DAF23A270130017B2E4 /* Main.storyboard */; };
 		F3827DB323A270140017B2E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3827DB223A270140017B2E4 /* Assets.xcassets */; };
 		F3827DB623A270140017B2E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3827DB423A270140017B2E4 /* LaunchScreen.storyboard */; };
 		F3827DB923A270140017B2E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F3827DB823A270140017B2E4 /* main.m */; };
+		F3827DC123A2719C0017B2E4 /* TemperatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3827DC023A2719C0017B2E4 /* TemperatureViewController.m */; };
+		F3827DC423A2780F0017B2E4 /* DistanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3827DC323A2780F0017B2E4 /* DistanceViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,13 +23,15 @@
 		F3827DA723A270130017B2E4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F3827DA923A270130017B2E4 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		F3827DAA23A270130017B2E4 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		F3827DAC23A270130017B2E4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F3827DAD23A270130017B2E4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F3827DB023A270130017B2E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F3827DB223A270140017B2E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3827DB523A270140017B2E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F3827DB723A270140017B2E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3827DB823A270140017B2E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F3827DBF23A2719C0017B2E4 /* TemperatureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TemperatureViewController.h; sourceTree = "<group>"; };
+		F3827DC023A2719C0017B2E4 /* TemperatureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TemperatureViewController.m; sourceTree = "<group>"; };
+		F3827DC223A2780F0017B2E4 /* DistanceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DistanceViewController.h; sourceTree = "<group>"; };
+		F3827DC323A2780F0017B2E4 /* DistanceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DistanceViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,8 +68,10 @@
 				F3827DA723A270130017B2E4 /* AppDelegate.m */,
 				F3827DA923A270130017B2E4 /* SceneDelegate.h */,
 				F3827DAA23A270130017B2E4 /* SceneDelegate.m */,
-				F3827DAC23A270130017B2E4 /* ViewController.h */,
-				F3827DAD23A270130017B2E4 /* ViewController.m */,
+				F3827DBF23A2719C0017B2E4 /* TemperatureViewController.h */,
+				F3827DC023A2719C0017B2E4 /* TemperatureViewController.m */,
+				F3827DC223A2780F0017B2E4 /* DistanceViewController.h */,
+				F3827DC323A2780F0017B2E4 /* DistanceViewController.m */,
 				F3827DAF23A270130017B2E4 /* Main.storyboard */,
 				F3827DB223A270140017B2E4 /* Assets.xcassets */,
 				F3827DB423A270140017B2E4 /* LaunchScreen.storyboard */,
@@ -146,10 +151,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3827DAE23A270130017B2E4 /* ViewController.m in Sources */,
 				F3827DA823A270130017B2E4 /* AppDelegate.m in Sources */,
 				F3827DB923A270140017B2E4 /* main.m in Sources */,
+				F3827DC423A2780F0017B2E4 /* DistanceViewController.m in Sources */,
 				F3827DAB23A270130017B2E4 /* SceneDelegate.m in Sources */,
+				F3827DC123A2719C0017B2E4 /* TemperatureViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

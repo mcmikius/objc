@@ -10,30 +10,167 @@
         <!--Temperature-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Temperature" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TemperatureViewController" title="Temperature" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="TemperatureViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="u5x-uL-8bB">
+                                <rect key="frame" x="16" y="153" width="343" height="361"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature converter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nYr-Wl-p6v">
+                                        <rect key="frame" x="64" y="0.0" width="215" height="27"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="215" id="LQe-qZ-ZzB"/>
+                                            <constraint firstAttribute="height" constant="27" id="QWm-W4-dUe"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Input Farenheite temperature" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hV9-pK-pZp">
+                                        <rect key="frame" x="53.5" y="61" width="236" height="15"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="15" id="0LX-Qg-15t"/>
+                                            <constraint firstAttribute="width" constant="236" id="U5B-B4-oJz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                        <color key="textColor" systemColor="placeholderTextColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input temperature" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7PT-4O-BGd">
+                                        <rect key="frame" x="0.0" y="110" width="343" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="343" id="p3G-0V-J5h"/>
+                                            <constraint firstAttribute="height" constant="34" id="qRL-61-eOR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOx-Ye-xO8">
+                                        <rect key="frame" x="48.5" y="178" width="246" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="246" id="HFD-CH-sfy"/>
+                                            <constraint firstAttribute="height" constant="50" id="Xgr-RQ-7C8"/>
+                                        </constraints>
+                                        <state key="normal" title="Convert">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tempConvert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h25-eB-0jh"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8T-nr-HFc">
+                                        <rect key="frame" x="5" y="262" width="333" height="99"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="99" id="71Z-m0-vdc"/>
+                                            <constraint firstAttribute="width" constant="333" id="HMq-gN-N65"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="u5x-uL-8bB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1kT-Ye-3je"/>
+                            <constraint firstItem="u5x-uL-8bB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6qv-8W-VdJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Temperature" image="cloud.fill" catalog="system" id="Dw8-Jn-1n6"/>
+                    <connections>
+                        <outlet property="tempCompleteLabel" destination="Y8T-nr-HFc" id="3Ol-LW-nPg"/>
+                        <outlet property="tempTextField" destination="7PT-4O-BGd" id="2mg-MJ-xms"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1087" y="0.0"/>
+            <point key="canvasLocation" x="1085.5999999999999" y="-0.44977511244377816"/>
         </scene>
         <!--Distance-->
         <scene sceneID="Koc-Qx-RZu">
             <objects>
-                <viewController title="Distance" id="Sm2-lf-raB" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DistanceViewController" title="Distance" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Sm2-lf-raB" customClass="DistanceViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l5X-nj-BAs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="Eqt-XM-r7p">
+                                <rect key="frame" x="16" y="153" width="343" height="361"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance converter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5kg-dH-q89">
+                                        <rect key="frame" x="64" y="0.0" width="215" height="27"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="215" id="0Dt-d1-CuU"/>
+                                            <constraint firstAttribute="height" constant="27" id="jKb-3O-3SK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Input distance in miles" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aT5-Ds-g7x">
+                                        <rect key="frame" x="53.5" y="61" width="236" height="15"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="15" id="02Z-Rn-1vF"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="236" id="RfK-dj-5QV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                        <color key="textColor" systemColor="placeholderTextColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input distance" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z6c-fd-ady">
+                                        <rect key="frame" x="0.0" y="110" width="343" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="hJi-nX-VKj"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="343" id="icD-C1-enT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lk6-Lb-Ios">
+                                        <rect key="frame" x="48.5" y="178" width="246" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="246" id="cJN-wg-53u"/>
+                                            <constraint firstAttribute="height" constant="50" id="pau-IB-emn"/>
+                                        </constraints>
+                                        <state key="normal" title="Convert">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonConvert:" destination="Sm2-lf-raB" eventType="touchUpInside" id="4Cp-Jq-Zsv"/>
+                                            <action selector="tempConvert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kEx-B7-rj0"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aln-QT-vSf">
+                                        <rect key="frame" x="5" y="262" width="333" height="99"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="333" id="KqC-Nz-VrS"/>
+                                            <constraint firstAttribute="height" constant="99" id="fri-pJ-qdB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Eqt-XM-r7p" firstAttribute="centerX" secondItem="l5X-nj-BAs" secondAttribute="centerX" id="Kek-4Q-A24"/>
+                            <constraint firstItem="Eqt-XM-r7p" firstAttribute="centerY" secondItem="l5X-nj-BAs" secondAttribute="centerY" id="Mj8-0I-wIx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="sgy-if-3He"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Distance" image="mappin.and.ellipse" catalog="system" id="sAJ-8s-pIM"/>
+                    <connections>
+                        <outlet property="completeLabel" destination="Aln-QT-vSf" id="sBC-Ww-knC"/>
+                        <outlet property="distanceTextField" destination="z6c-fd-ady" id="2Xk-jW-s7Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GwE-YW-f23" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
