@@ -94,6 +94,7 @@
     notification.applicationIconBadgeNumber = 1;
     notification.soundName = UILocalNotificationDefaultSoundName;
     [[UIApplication sharedApplication]scheduleLocalNotification:notification];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"NewEvent" object:nil];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
