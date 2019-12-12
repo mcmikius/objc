@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+- (IBAction)buttonCompleted:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 
 
 @end
