@@ -27,7 +27,9 @@
 }
 
 - (void) viewWillAppear:(BOOL)animated {
-    self.arrayEvents = [[NSMutableArray alloc] initWithObjects:@"AAA", @"BBB", @"CCC", nil];
+    
+    NSArray * array = [[UIApplication sharedApplication] scheduledLocalNotifications];
+    self.arrayEvents = [[NSMutableArray alloc] initWithArray:array];
 }
 
 #pragma mark - Table view data source
@@ -48,9 +50,12 @@
     NSString * identifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
     
-    NSString * string = [self.arrayEvents objectAtIndex:indexPath.row];
+    UILocalNotification * notification = [self.arrayEvents objectAtIndex:indexPath.row];
+    NSDictionary * dictionary = notification.userInfo;
     
-    cell.textLabel.text = string;
+    
+    cell.textLabel.text = [dictionary objectForKey:@"eventInfo"];
+    cell.detailTextLabel.text = [dictionary objectForKey:@"eventDate"];
     
     return cell;
 }
