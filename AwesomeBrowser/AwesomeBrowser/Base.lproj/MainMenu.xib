@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15702" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15702"/>
-        <plugIn identifier="com.apple.WebKitIBPlugin" version="15702"/>
+        <plugIn identifier="com.apple.WebKit2IBPlugin" version="15702"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -690,12 +690,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="546" height="360"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <webView translatesAutoresizingMaskIntoConstraints="NO" id="2BG-La-mDw">
-                        <rect key="frame" x="20" y="20" width="506" height="279"/>
-                        <webPreferences key="preferences" defaultFontSize="16" defaultFixedFontSize="13" minimumFontSize="0">
-                            <nil key="identifier"/>
-                        </webPreferences>
-                    </webView>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iYJ-mk-aKE">
                         <rect key="frame" x="14" y="312" width="70" height="32"/>
                         <buttonCell key="cell" type="push" title="Back" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="q6m-dd-7ut">
@@ -703,7 +697,7 @@
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
-                            <action selector="goBack:" target="2BG-La-mDw" id="9ot-Bc-Dy3"/>
+                            <action selector="goBack:" target="eQv-G9-YYf" id="Z1W-RA-qQz"/>
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="A0R-vJ-2SE">
@@ -713,7 +707,7 @@
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
-                            <action selector="goForward:" target="2BG-La-mDw" id="SKp-WV-7a3"/>
+                            <action selector="goForward:" target="eQv-G9-YYf" id="gMO-sB-17A"/>
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2Ga-qi-qQr">
@@ -722,9 +716,6 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
-                        <connections>
-                            <action selector="makeTextLarger:" target="2BG-La-mDw" id="53N-K6-Vc6"/>
-                        </connections>
                     </button>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="X77-9C-MWv">
                         <rect key="frame" x="485" y="312" width="47" height="32"/>
@@ -732,9 +723,6 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
-                        <connections>
-                            <action selector="makeTextSmaller:" target="2BG-La-mDw" id="t10-MQ-KVj"/>
-                        </connections>
                     </button>
                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JQu-qd-biw">
                         <rect key="frame" x="172" y="319" width="114" height="21"/>
@@ -743,9 +731,6 @@
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
-                        <connections>
-                            <action selector="takeStringURLFrom:" target="2BG-La-mDw" id="Kpi-5I-Jgq"/>
-                        </connections>
                     </textField>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="g33-jB-aX2">
                         <rect key="frame" x="288" y="312" width="69" height="32"/>
@@ -754,7 +739,7 @@
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
-                            <action selector="stopLoading:" target="2BG-La-mDw" id="uDb-Hs-XY0"/>
+                            <action selector="stopLoading:" target="eQv-G9-YYf" id="HFx-Jc-wht"/>
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uu0-Md-rS1">
@@ -764,13 +749,20 @@
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
-                            <action selector="reload:" target="2BG-La-mDw" id="reW-mO-GCg"/>
+                            <action selector="reload:" target="eQv-G9-YYf" id="9hq-5z-ZGX"/>
                         </connections>
                     </button>
+                    <wkWebView wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eQv-G9-YYf">
+                        <rect key="frame" x="20" y="20" width="506" height="291"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <wkWebViewConfiguration key="configuration">
+                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                            <wkPreferences key="preferences"/>
+                        </wkWebViewConfiguration>
+                    </wkWebView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="uu0-Md-rS1" firstAttribute="leading" secondItem="g33-jB-aX2" secondAttribute="trailing" constant="8" id="1kR-PK-W4I"/>
-                    <constraint firstAttribute="bottom" secondItem="2BG-La-mDw" secondAttribute="bottom" constant="20" id="54F-gp-Cod"/>
                     <constraint firstItem="g33-jB-aX2" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="20" id="KLG-Wk-ohD"/>
                     <constraint firstItem="uu0-Md-rS1" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="20" id="ODV-z0-zrc"/>
                     <constraint firstItem="X77-9C-MWv" firstAttribute="leading" secondItem="2Ga-qi-qQr" secondAttribute="trailing" constant="8" id="PWf-CK-Thu"/>
@@ -779,10 +771,7 @@
                     <constraint firstItem="g33-jB-aX2" firstAttribute="leading" secondItem="JQu-qd-biw" secondAttribute="trailing" constant="8" id="XIE-fd-IPC"/>
                     <constraint firstItem="JQu-qd-biw" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="20" id="ZcD-k2-efN"/>
                     <constraint firstItem="2Ga-qi-qQr" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="20" id="aL4-mm-5Nh"/>
-                    <constraint firstItem="2BG-La-mDw" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" id="bCe-eB-Xjq"/>
                     <constraint firstItem="A0R-vJ-2SE" firstAttribute="leading" secondItem="iYJ-mk-aKE" secondAttribute="trailing" constant="8" id="dyA-Bg-44J"/>
-                    <constraint firstAttribute="trailing" secondItem="2BG-La-mDw" secondAttribute="trailing" constant="20" id="eNq-P2-Zsg"/>
-                    <constraint firstItem="2BG-La-mDw" firstAttribute="top" secondItem="iYJ-mk-aKE" secondAttribute="bottom" constant="20" id="hob-ee-014"/>
                     <constraint firstItem="iYJ-mk-aKE" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" id="kTl-3g-AO8"/>
                     <constraint firstItem="X77-9C-MWv" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="20" id="kVo-bc-Ong"/>
                     <constraint firstItem="A0R-vJ-2SE" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="20" id="niV-vx-D8v"/>
