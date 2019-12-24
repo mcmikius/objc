@@ -1,7 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11134" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15702" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15702"/>
+        <plugIn identifier="com.apple.WebKitIBPlugin" version="15702"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -10,8 +12,8 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application" customClass="NSApplication"/>
-        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="">
+        <customObject id="-3" userLabel="Application"/>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
@@ -677,16 +679,118 @@
                     </menu>
                 </menuItem>
             </items>
+            <point key="canvasLocation" x="139" y="154"/>
         </menu>
         <window title="AwesomeBrowser" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="480" height="360"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+            <rect key="contentRect" x="335" y="390" width="546" height="360"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1050"/>
             <view key="contentView" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
+                <rect key="frame" x="0.0" y="0.0" width="546" height="360"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <webView translatesAutoresizingMaskIntoConstraints="NO" id="2BG-La-mDw">
+                        <rect key="frame" x="20" y="20" width="506" height="279"/>
+                        <webPreferences key="preferences" defaultFontSize="16" defaultFixedFontSize="13" minimumFontSize="0">
+                            <nil key="identifier"/>
+                        </webPreferences>
+                    </webView>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iYJ-mk-aKE">
+                        <rect key="frame" x="14" y="312" width="70" height="32"/>
+                        <buttonCell key="cell" type="push" title="Back" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="q6m-dd-7ut">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="goBack:" target="2BG-La-mDw" id="9ot-Bc-Dy3"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="A0R-vJ-2SE">
+                        <rect key="frame" x="80" y="312" width="90" height="32"/>
+                        <buttonCell key="cell" type="push" title="Forward" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bxW-j0-Jza">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="goForward:" target="2BG-La-mDw" id="SKp-WV-7a3"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2Ga-qi-qQr">
+                        <rect key="frame" x="440" y="312" width="49" height="32"/>
+                        <buttonCell key="cell" type="push" title="+" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zKa-aE-hcf">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="makeTextLarger:" target="2BG-La-mDw" id="53N-K6-Vc6"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="X77-9C-MWv">
+                        <rect key="frame" x="485" y="312" width="47" height="32"/>
+                        <buttonCell key="cell" type="push" title="-" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="vu5-LA-UpG">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="makeTextSmaller:" target="2BG-La-mDw" id="t10-MQ-KVj"/>
+                        </connections>
+                    </button>
+                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JQu-qd-biw">
+                        <rect key="frame" x="172" y="319" width="114" height="21"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="btd-mw-sVM">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                        <connections>
+                            <action selector="takeStringURLFrom:" target="2BG-La-mDw" id="Kpi-5I-Jgq"/>
+                        </connections>
+                    </textField>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="g33-jB-aX2">
+                        <rect key="frame" x="288" y="312" width="69" height="32"/>
+                        <buttonCell key="cell" type="push" title="Stop" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dv6-zA-lLQ">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="stopLoading:" target="2BG-La-mDw" id="uDb-Hs-XY0"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uu0-Md-rS1">
+                        <rect key="frame" x="353" y="312" width="87" height="32"/>
+                        <buttonCell key="cell" type="push" title="Refresh" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="vNp-u2-ddO">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="reload:" target="2BG-La-mDw" id="reW-mO-GCg"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="uu0-Md-rS1" firstAttribute="leading" secondItem="g33-jB-aX2" secondAttribute="trailing" constant="8" id="1kR-PK-W4I"/>
+                    <constraint firstAttribute="bottom" secondItem="2BG-La-mDw" secondAttribute="bottom" constant="20" id="54F-gp-Cod"/>
+                    <constraint firstItem="g33-jB-aX2" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="20" id="KLG-Wk-ohD"/>
+                    <constraint firstItem="uu0-Md-rS1" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="20" id="ODV-z0-zrc"/>
+                    <constraint firstItem="X77-9C-MWv" firstAttribute="leading" secondItem="2Ga-qi-qQr" secondAttribute="trailing" constant="8" id="PWf-CK-Thu"/>
+                    <constraint firstItem="iYJ-mk-aKE" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="20" id="Qns-06-sVg"/>
+                    <constraint firstItem="2Ga-qi-qQr" firstAttribute="leading" secondItem="uu0-Md-rS1" secondAttribute="trailing" constant="12" id="WEM-eJ-IhV"/>
+                    <constraint firstItem="g33-jB-aX2" firstAttribute="leading" secondItem="JQu-qd-biw" secondAttribute="trailing" constant="8" id="XIE-fd-IPC"/>
+                    <constraint firstItem="JQu-qd-biw" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="20" id="ZcD-k2-efN"/>
+                    <constraint firstItem="2Ga-qi-qQr" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="20" id="aL4-mm-5Nh"/>
+                    <constraint firstItem="2BG-La-mDw" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" id="bCe-eB-Xjq"/>
+                    <constraint firstItem="A0R-vJ-2SE" firstAttribute="leading" secondItem="iYJ-mk-aKE" secondAttribute="trailing" constant="8" id="dyA-Bg-44J"/>
+                    <constraint firstAttribute="trailing" secondItem="2BG-La-mDw" secondAttribute="trailing" constant="20" id="eNq-P2-Zsg"/>
+                    <constraint firstItem="2BG-La-mDw" firstAttribute="top" secondItem="iYJ-mk-aKE" secondAttribute="bottom" constant="20" id="hob-ee-014"/>
+                    <constraint firstItem="iYJ-mk-aKE" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" id="kTl-3g-AO8"/>
+                    <constraint firstItem="X77-9C-MWv" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="20" id="kVo-bc-Ong"/>
+                    <constraint firstItem="A0R-vJ-2SE" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="20" id="niV-vx-D8v"/>
+                    <constraint firstAttribute="trailing" secondItem="X77-9C-MWv" secondAttribute="trailing" constant="20" id="qqk-Pd-peR"/>
+                    <constraint firstItem="JQu-qd-biw" firstAttribute="leading" secondItem="A0R-vJ-2SE" secondAttribute="trailing" constant="8" id="vZU-by-z3e"/>
+                </constraints>
             </view>
+            <point key="canvasLocation" x="172" y="-120"/>
         </window>
     </objects>
 </document>

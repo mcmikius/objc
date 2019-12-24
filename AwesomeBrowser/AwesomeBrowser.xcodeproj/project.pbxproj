@@ -12,6 +12,7 @@
 		F31EEAEA23B2846C00668DBB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F31EEAE823B2846C00668DBB /* MainMenu.xib */; };
 		F31EEAED23B2846C00668DBB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F31EEAEC23B2846C00668DBB /* main.m */; };
 		F31EEAF823B2846D00668DBB /* AwesomeBrowserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F31EEAF723B2846D00668DBB /* AwesomeBrowserTests.m */; };
+		F31EEB0423B284DF00668DBB /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F31EEB0323B284DF00668DBB /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		F31EEAF323B2846D00668DBB /* AwesomeBrowserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AwesomeBrowserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F31EEAF723B2846D00668DBB /* AwesomeBrowserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AwesomeBrowserTests.m; sourceTree = "<group>"; };
 		F31EEAF923B2846D00668DBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F31EEB0323B284DF00668DBB /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F31EEB0423B284DF00668DBB /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +65,7 @@
 				F31EEAE223B2846A00668DBB /* AwesomeBrowser */,
 				F31EEAF623B2846D00668DBB /* AwesomeBrowserTests */,
 				F31EEAE123B2846A00668DBB /* Products */,
+				F31EEB0223B284DF00668DBB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,6 +99,14 @@
 				F31EEAF923B2846D00668DBB /* Info.plist */,
 			);
 			path = AwesomeBrowserTests;
+			sourceTree = "<group>";
+		};
+		F31EEB0223B284DF00668DBB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F31EEB0323B284DF00668DBB /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
