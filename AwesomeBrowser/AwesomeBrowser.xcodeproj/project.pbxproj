@@ -1,0 +1,454 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F31EEAE523B2846A00668DBB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F31EEAE423B2846A00668DBB /* AppDelegate.m */; };
+		F31EEAE723B2846C00668DBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F31EEAE623B2846C00668DBB /* Assets.xcassets */; };
+		F31EEAEA23B2846C00668DBB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F31EEAE823B2846C00668DBB /* MainMenu.xib */; };
+		F31EEAED23B2846C00668DBB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F31EEAEC23B2846C00668DBB /* main.m */; };
+		F31EEAF823B2846D00668DBB /* AwesomeBrowserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F31EEAF723B2846D00668DBB /* AwesomeBrowserTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F31EEAF423B2846D00668DBB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F31EEAD823B2846A00668DBB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F31EEADF23B2846A00668DBB;
+			remoteInfo = AwesomeBrowser;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F31EEAE023B2846A00668DBB /* AwesomeBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AwesomeBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F31EEAE323B2846A00668DBB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F31EEAE423B2846A00668DBB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F31EEAE623B2846C00668DBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F31EEAE923B2846C00668DBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		F31EEAEB23B2846C00668DBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F31EEAEC23B2846C00668DBB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F31EEAEE23B2846C00668DBB /* AwesomeBrowser.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AwesomeBrowser.entitlements; sourceTree = "<group>"; };
+		F31EEAF323B2846D00668DBB /* AwesomeBrowserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AwesomeBrowserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F31EEAF723B2846D00668DBB /* AwesomeBrowserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AwesomeBrowserTests.m; sourceTree = "<group>"; };
+		F31EEAF923B2846D00668DBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F31EEADD23B2846A00668DBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F31EEAF023B2846D00668DBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F31EEAD723B2846A00668DBB = {
+			isa = PBXGroup;
+			children = (
+				F31EEAE223B2846A00668DBB /* AwesomeBrowser */,
+				F31EEAF623B2846D00668DBB /* AwesomeBrowserTests */,
+				F31EEAE123B2846A00668DBB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F31EEAE123B2846A00668DBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F31EEAE023B2846A00668DBB /* AwesomeBrowser.app */,
+				F31EEAF323B2846D00668DBB /* AwesomeBrowserTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F31EEAE223B2846A00668DBB /* AwesomeBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				F31EEAE323B2846A00668DBB /* AppDelegate.h */,
+				F31EEAE423B2846A00668DBB /* AppDelegate.m */,
+				F31EEAE623B2846C00668DBB /* Assets.xcassets */,
+				F31EEAE823B2846C00668DBB /* MainMenu.xib */,
+				F31EEAEB23B2846C00668DBB /* Info.plist */,
+				F31EEAEC23B2846C00668DBB /* main.m */,
+				F31EEAEE23B2846C00668DBB /* AwesomeBrowser.entitlements */,
+			);
+			path = AwesomeBrowser;
+			sourceTree = "<group>";
+		};
+		F31EEAF623B2846D00668DBB /* AwesomeBrowserTests */ = {
+			isa = PBXGroup;
+			children = (
+				F31EEAF723B2846D00668DBB /* AwesomeBrowserTests.m */,
+				F31EEAF923B2846D00668DBB /* Info.plist */,
+			);
+			path = AwesomeBrowserTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F31EEADF23B2846A00668DBB /* AwesomeBrowser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F31EEAFC23B2846D00668DBB /* Build configuration list for PBXNativeTarget "AwesomeBrowser" */;
+			buildPhases = (
+				F31EEADC23B2846A00668DBB /* Sources */,
+				F31EEADD23B2846A00668DBB /* Frameworks */,
+				F31EEADE23B2846A00668DBB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AwesomeBrowser;
+			productName = AwesomeBrowser;
+			productReference = F31EEAE023B2846A00668DBB /* AwesomeBrowser.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F31EEAF223B2846D00668DBB /* AwesomeBrowserTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F31EEAFF23B2846D00668DBB /* Build configuration list for PBXNativeTarget "AwesomeBrowserTests" */;
+			buildPhases = (
+				F31EEAEF23B2846D00668DBB /* Sources */,
+				F31EEAF023B2846D00668DBB /* Frameworks */,
+				F31EEAF123B2846D00668DBB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F31EEAF523B2846D00668DBB /* PBXTargetDependency */,
+			);
+			name = AwesomeBrowserTests;
+			productName = AwesomeBrowserTests;
+			productReference = F31EEAF323B2846D00668DBB /* AwesomeBrowserTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F31EEAD823B2846A00668DBB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Mykhailo Bondarenko";
+				TargetAttributes = {
+					F31EEADF23B2846A00668DBB = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					F31EEAF223B2846D00668DBB = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = F31EEADF23B2846A00668DBB;
+					};
+				};
+			};
+			buildConfigurationList = F31EEADB23B2846A00668DBB /* Build configuration list for PBXProject "AwesomeBrowser" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F31EEAD723B2846A00668DBB;
+			productRefGroup = F31EEAE123B2846A00668DBB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F31EEADF23B2846A00668DBB /* AwesomeBrowser */,
+				F31EEAF223B2846D00668DBB /* AwesomeBrowserTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F31EEADE23B2846A00668DBB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F31EEAE723B2846C00668DBB /* Assets.xcassets in Resources */,
+				F31EEAEA23B2846C00668DBB /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F31EEAF123B2846D00668DBB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F31EEADC23B2846A00668DBB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F31EEAED23B2846C00668DBB /* main.m in Sources */,
+				F31EEAE523B2846A00668DBB /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F31EEAEF23B2846D00668DBB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F31EEAF823B2846D00668DBB /* AwesomeBrowserTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F31EEAF523B2846D00668DBB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F31EEADF23B2846A00668DBB /* AwesomeBrowser */;
+			targetProxy = F31EEAF423B2846D00668DBB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F31EEAE823B2846C00668DBB /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F31EEAE923B2846C00668DBB /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F31EEAFA23B2846D00668DBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F31EEAFB23B2846D00668DBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F31EEAFD23B2846D00668DBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AwesomeBrowser/AwesomeBrowser.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = GYWWW55376;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = AwesomeBrowser/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mcmikius.AwesomeBrowser;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F31EEAFE23B2846D00668DBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AwesomeBrowser/AwesomeBrowser.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = GYWWW55376;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = AwesomeBrowser/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mcmikius.AwesomeBrowser;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F31EEB0023B2846D00668DBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = GYWWW55376;
+				INFOPLIST_FILE = AwesomeBrowserTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mcmikius.AwesomeBrowserTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AwesomeBrowser.app/Contents/MacOS/AwesomeBrowser";
+			};
+			name = Debug;
+		};
+		F31EEB0123B2846D00668DBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = GYWWW55376;
+				INFOPLIST_FILE = AwesomeBrowserTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mcmikius.AwesomeBrowserTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AwesomeBrowser.app/Contents/MacOS/AwesomeBrowser";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F31EEADB23B2846A00668DBB /* Build configuration list for PBXProject "AwesomeBrowser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F31EEAFA23B2846D00668DBB /* Debug */,
+				F31EEAFB23B2846D00668DBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F31EEAFC23B2846D00668DBB /* Build configuration list for PBXNativeTarget "AwesomeBrowser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F31EEAFD23B2846D00668DBB /* Debug */,
+				F31EEAFE23B2846D00668DBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F31EEAFF23B2846D00668DBB /* Build configuration list for PBXNativeTarget "AwesomeBrowserTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F31EEB0023B2846D00668DBB /* Debug */,
+				F31EEB0123B2846D00668DBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F31EEAD823B2846A00668DBB /* Project object */;
+}
