@@ -24,5 +24,12 @@
     // Insert code here to tear down your application
 }
 
+-(IBAction)seed:(id)sender {
+    srandom((unsigned)time(NULL));
+}
+-(IBAction)generate:(id)sender {
+    int num = (int)((random() % 100) + 1);
+    [textField setIntValue:num];
+}
 
 @end

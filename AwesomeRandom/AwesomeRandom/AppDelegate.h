@@ -8,8 +8,17 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate> {
+    
+    IBOutlet NSTextField *textField;
+    
+}
 
+
+
+
+- (IBAction)generate:(id)sender;
+- (IBAction)seed:(id)sender;
 
 @end
 

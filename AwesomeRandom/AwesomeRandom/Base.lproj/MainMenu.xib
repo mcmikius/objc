@@ -14,6 +14,7 @@
         <customObject id="-3" userLabel="Application"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
+                <outlet property="textField" destination="lUo-XS-IKR" id="63l-Bf-959"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -691,17 +692,23 @@
                 <subviews>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VNA-T5-gtc">
                         <rect key="frame" x="14" y="142" width="96" height="32"/>
-                        <buttonCell key="cell" type="push" title="Generate" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="K9W-Xf-akc">
+                        <buttonCell key="cell" type="push" title="Generate" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" sound="Funk" inset="2" id="K9W-Xf-akc">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="message"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="generate:" target="Voe-Tx-rLC" id="AOb-rH-oPO"/>
+                        </connections>
                     </button>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bbN-D8-FTG">
                         <rect key="frame" x="110" y="142" width="71" height="32"/>
-                        <buttonCell key="cell" type="push" title="Seed" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ozX-Al-e0w">
+                        <buttonCell key="cell" type="push" title="Seed" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" sound="Basso" inset="2" id="ozX-Al-e0w">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="message"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="seed:" target="Voe-Tx-rLC" id="9YL-kf-MCY"/>
+                        </connections>
                     </button>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lUo-XS-IKR">
                         <rect key="frame" x="18" y="103" width="159" height="24"/>
@@ -725,4 +732,8 @@
             <point key="canvasLocation" x="-3.5" y="347"/>
         </window>
     </objects>
+    <resources>
+        <sound name="Basso"/>
+        <sound name="Funk"/>
+    </resources>
 </document>
