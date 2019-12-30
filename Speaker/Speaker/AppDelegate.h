@@ -8,8 +8,15 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate> {
+    NSSpeechSynthesizer *speaker;
+    
+}
 
+@property (weak) IBOutlet NSTextField *textField;
+
+- (IBAction)speakIt:(id)sender;
+- (IBAction)stopIt:(id)sender;
 
 @end
 

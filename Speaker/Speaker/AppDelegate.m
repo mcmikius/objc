@@ -16,7 +16,7 @@
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    // Insert code here to initialize your application
+    speaker = [[NSSpeechSynthesizer alloc] initWithVoice:NULL];
 }
 
 
@@ -24,5 +24,14 @@
     // Insert code here to tear down your application
 }
 
+
+- (IBAction)speakIt:(id)sender {
+    [speaker startSpeakingString:[_textField stringValue]];
+    
+}
+
+- (IBAction)stopIt:(id)sender {
+    [speaker stopSpeaking];
+}
 
 @end
