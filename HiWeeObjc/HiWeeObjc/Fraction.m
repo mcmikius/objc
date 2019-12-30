@@ -10,9 +10,9 @@
 
 @implementation Fraction
 
-- (void)print {
-    NSLog(@"%i / %i", _numerator, _denominator);
-}
+//- (void)print {
+//    NSLog(@"%i / %i", _numerator, _denominator);
+//}
 
 - (void)add: (Fraction *) f {
     [self setNumerator:self.numerator * f.denominator + self.denominator * f.numerator];
@@ -22,6 +22,10 @@
 - (void)doubleNumber {
     [self setNumerator:self.numerator * 2];
     [self setDenominator:self.denominator *2];
+}
+
+- (NSString *)description {
+    return [NSString stringWithFormat:@"%i / %i", _numerator, _denominator];
 }
 
 @end

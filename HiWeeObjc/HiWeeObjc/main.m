@@ -18,6 +18,7 @@
 @end
 
 int main(int argc, const char * argv[]) {
+    
     @autoreleasepool {
         // insert code here...
         Fraction *myFraction, *myFraction2;
@@ -32,7 +33,7 @@ int main(int argc, const char * argv[]) {
         
         [myFraction add: myFraction2];
         
-        [myFraction print];
+        NSLog(@"%@", myFraction);
     }
     return 0;
 }

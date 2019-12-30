@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property int numerator, denominator;
 
-- (void) print;
+//- (void) print;
 
 @end
 
