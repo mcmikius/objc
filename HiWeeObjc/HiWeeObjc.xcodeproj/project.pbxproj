@@ -24,6 +24,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F332613C23BA235A004E2E92 /* numbersProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = numbersProtocol.h; sourceTree = "<group>"; };
 		F3694DE923A692E0007179FE /* HiWeeObjc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HiWeeObjc; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3694DEC23A692E0007179FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F3694DF323A6930D007179FE /* Fraction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fraction.h; sourceTree = "<group>"; };
@@ -61,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				F3694DEC23A692E0007179FE /* main.m */,
+				F332613C23BA235A004E2E92 /* numbersProtocol.h */,
 				F3694DF323A6930D007179FE /* Fraction.h */,
 				F3694DF423A6930D007179FE /* Fraction.m */,
 			);
