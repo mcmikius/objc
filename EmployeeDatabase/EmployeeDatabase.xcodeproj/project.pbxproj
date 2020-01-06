@@ -13,6 +13,7 @@
 		F34AAB4523C37CCD003CC265 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F34AAB4423C37CCD003CC265 /* Assets.xcassets */; };
 		F34AAB4823C37CCD003CC265 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F34AAB4623C37CCD003CC265 /* MainMenu.xib */; };
 		F34AAB4B23C37CCD003CC265 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F34AAB4A23C37CCD003CC265 /* main.m */; };
+		F34AAB5423C37DD4003CC265 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = F34AAB5323C37DD4003CC265 /* Person.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,8 @@
 		F34AAB4923C37CCD003CC265 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F34AAB4A23C37CCD003CC265 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F34AAB4C23C37CCD003CC265 /* EmployeeDatabase.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EmployeeDatabase.entitlements; sourceTree = "<group>"; };
+		F34AAB5223C37DD4003CC265 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		F34AAB5323C37DD4003CC265 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +64,8 @@
 			children = (
 				F34AAB3B23C37CCC003CC265 /* AppDelegate.h */,
 				F34AAB3C23C37CCC003CC265 /* AppDelegate.m */,
+				F34AAB5223C37DD4003CC265 /* Person.h */,
+				F34AAB5323C37DD4003CC265 /* Person.m */,
 				F34AAB3E23C37CCC003CC265 /* Document.h */,
 				F34AAB3F23C37CCC003CC265 /* Document.m */,
 				F34AAB4123C37CCC003CC265 /* Document.xib */,
@@ -145,6 +150,7 @@
 			files = (
 				F34AAB4023C37CCC003CC265 /* Document.m in Sources */,
 				F34AAB4B23C37CCD003CC265 /* main.m in Sources */,
+				F34AAB5423C37DD4003CC265 /* Person.m in Sources */,
 				F34AAB3D23C37CCC003CC265 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

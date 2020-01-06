@@ -8,8 +8,11 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface Document : NSDocument
+@interface Document : NSDocument {
+    NSMutableArray * employees;
+}
 
+-(void)setEmployees: (NSMutableArray *) empl;
 
 @end
 

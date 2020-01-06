@@ -17,7 +17,7 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        // Add your subclass-specific initialization here.
+        employees = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -26,6 +26,11 @@
     return YES;
 }
 
+- (void)setEmployees:(NSMutableArray *)empl {
+    if (employees != empl) {
+        employees = empl;
+    }
+}
 
 - (NSString *)windowNibName {
     // Override returning the nib file name of the document
