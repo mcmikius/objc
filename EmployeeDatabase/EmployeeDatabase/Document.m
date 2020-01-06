@@ -55,5 +55,23 @@
     return YES;
 }
 
+-(void)insertObject:(Person *)p inEmployeesAtIndex:(NSInteger)index {
+    NSUndoManager *undo = [self undoManager];
+    [[undo prepareWithInvocationTarget:self]removeObjectFromEmployeesAtIndex:index];
+    if (![undo isUndoing]) {
+        [undo setActionName:@"Add person"];
+    }
+    [employees insertObject:p atIndex:index];
+}
+
+-(void)removeObjectFromEmployeesAtIndex:(NSInteger)index {
+    NSUndoManager *undo = [self undoManager];
+    Person * p = [employees objectAtIndex:index];
+    [[undo prepareWithInvocationTarget:self]insertObject:p inEmployeesAtIndex:index];
+    if (![undo isUndoing]) {
+        [undo setActionName:@"Remove person"];
+    }
+    [employees removeObjectAtIndex:index];
+}
 
 @end

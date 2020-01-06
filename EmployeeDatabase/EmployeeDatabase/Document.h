@@ -7,12 +7,16 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "Person.h"
 
 @interface Document : NSDocument {
     NSMutableArray * employees;
 }
 
 -(void)setEmployees: (NSMutableArray *) empl;
+
+-(void)insertObject:(Person*)p inEmployeesAtIndex:(NSInteger)index;
+-(void)removeObjectFromEmployeesAtIndex:(NSInteger)index;
 
 @end
 

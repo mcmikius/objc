@@ -96,8 +96,8 @@
                         </tableHeaderView>
                     </scrollView>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZuS-IG-Civ">
-                        <rect key="frame" x="14" y="13" width="65" height="32"/>
-                        <buttonCell key="cell" type="push" title="Add" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="7kp-wY-Vpt">
+                        <rect key="frame" x="14" y="13" width="93" height="32"/>
+                        <buttonCell key="cell" type="push" title="Add new" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="7kp-wY-Vpt">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -106,7 +106,7 @@
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qKa-zW-EPu">
-                        <rect key="frame" x="79" y="13" width="89" height="32"/>
+                        <rect key="frame" x="107" y="13" width="89" height="32"/>
                         <buttonCell key="cell" type="push" title="Remove" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="lKl-7y-Ni4">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -133,7 +133,7 @@
             <connections>
                 <outlet property="delegate" destination="-2" id="0bl-1N-x8E"/>
             </connections>
-            <point key="canvasLocation" x="271" y="91"/>
+            <point key="canvasLocation" x="324" y="100"/>
         </window>
         <arrayController objectClassName="Person" id="IJT-WL-OHt">
             <declaredKeys>
