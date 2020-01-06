@@ -19,6 +19,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     speaker = [[NSSpeechSynthesizer alloc] initWithVoice:NULL];
     [speaker setDelegate:self];
+    voices = [NSSpeechSynthesizer availableVoices];
 }
 
 
@@ -37,6 +38,15 @@
 
 - (void)speechSynthesizer:(NSSpeechSynthesizer *)sender didFinishSpeaking:(BOOL)finishedSpeaking {
     [_textField setStringValue:@""];
+}
+
+- (NSInteger)numberOfRowsInTableView: (NSTableView*) tableView {
+    return (NSInteger)[[NSSpeechSynthesizer availableVoices] count];
+}
+
+- (id) tableView: (NSTableView*) tableView objectValueForTableColumn:(nullable NSTableColumn *)tableColumn row:(NSInteger)row {
+    NSString *view = [voices objectAtIndex:row];
+    return view;
 }
 
 @end

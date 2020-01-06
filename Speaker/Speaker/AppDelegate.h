@@ -11,10 +11,12 @@
 @interface AppDelegate : NSObject <NSApplicationDelegate, NSSpeechSynthesizerDelegate> {
     
     NSSpeechSynthesizer *speaker;
+    NSArray *voices;
     
 }
 
 @property (weak) IBOutlet NSTextField *textField;
+@property (weak) IBOutlet NSTableView *tableView;
 
 - (IBAction)speakIt:(id)sender;
 - (IBAction)stopIt:(id)sender;
