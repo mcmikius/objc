@@ -36,6 +36,13 @@
     [speaker stopSpeaking];
 }
 
+- (void) tableViewSelectionDidChange: (NSNotification *)notification {
+    NSInteger row = [_tableView selectedRow];
+    if (row == -1) { return; }
+    NSString *selectedVoice = [voices objectAtIndex:row];
+    [speaker setVoice:selectedVoice];
+}
+
 - (void)speechSynthesizer:(NSSpeechSynthesizer *)sender didFinishSpeaking:(BOOL)finishedSpeaking {
     [_textField setStringValue:@""];
 }
