@@ -24,5 +24,27 @@
     // Insert code here to tear down your application
 }
 
+- (id) init {
+    self = [super init];
+    if (self) {
+        [self setValue: [NSNumber numberWithInt:0] forKey:@"temperature"];
+    }
+    return self;
+}
+
+- (void) setTemperature: (int) x {
+    [_label setStringValue:[NSString stringWithFormat:@"%d", x]];
+    temperature = x;
+}
+
+- (NSInteger) temperature {
+    return temperature;
+}
+
+- (IBAction)increment:(id)sender {
+    [self willChangeValueForKey:@"temperature"];
+    [self setTemperature:[self temperature]+1];
+    [self didChangeValueForKey:@"temperature"];
+}
 
 @end

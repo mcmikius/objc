@@ -14,6 +14,7 @@
         <customObject id="-3" userLabel="Application"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
+                <outlet property="label" destination="snG-7d-QG2" id="pmy-Qu-2hF"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -691,7 +692,10 @@
                 <subviews>
                     <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qBR-jX-PDX">
                         <rect key="frame" x="18" y="323" width="444" height="19"/>
-                        <sliderCell key="cell" state="on" alignment="left" maxValue="100" tickMarkPosition="above" sliderType="linear" id="fPi-ot-PBX"/>
+                        <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="100" tickMarkPosition="above" sliderType="linear" id="fPi-ot-PBX"/>
+                        <connections>
+                            <binding destination="Voe-Tx-rLC" name="value" keyPath="self.temperature" id="jhm-TH-D4S"/>
+                        </connections>
                     </slider>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="snG-7d-QG2">
                         <rect key="frame" x="20" y="294" width="442" height="23"/>
@@ -707,6 +711,9 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="message"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="increment:" target="Voe-Tx-rLC" id="0cD-5g-qiK"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>
@@ -722,5 +729,6 @@
             </view>
             <point key="canvasLocation" x="139" y="-120"/>
         </window>
+        <userDefaultsController representsSharedInstance="YES" id="upa-OZ-uzJ"/>
     </objects>
 </document>

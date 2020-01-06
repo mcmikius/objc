@@ -8,7 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate> {
+    NSInteger temperature;
+}
+
+@property (weak) IBOutlet NSTextField *label;
+- (IBAction)increment:(id)sender;
 
 
 @end
