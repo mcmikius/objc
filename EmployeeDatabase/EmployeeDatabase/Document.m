@@ -96,6 +96,25 @@ static void *RMDocumentKVOContext;
     [employees removeObjectAtIndex:index];
 }
 
+- (void)changeKeyPath: (NSString*)keyPath ofObject:(id)obj toValue:(id)newValue {
+    [obj setValue: newValue forKeyPath: keyPath];
+}
 
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    if (context != &RMDocumentKVOContext) {
+        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+        return;
+    }
+    NSUndoManager *undo = [self undoManager];
+    id oldValue = [change objectForKey:NSKeyValueChangeOldKey];
+    if (oldValue == [NSNull null]) {
+        oldValue = nil;
+    }
+    
+    [[undo prepareWithInvocationTarget:self] changeKeyPath:keyPath ofObject:object toValue:oldValue];
+    
+    [undo setActionName:@"Edit"];
+        
+}
 
 @end
