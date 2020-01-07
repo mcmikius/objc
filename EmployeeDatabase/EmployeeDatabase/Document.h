@@ -15,7 +15,7 @@
 
 -(void)setEmployees: (NSMutableArray *) empl;
 
--(void)insertObject:(Person*)p inEmployeesAtIndex:(NSInteger)index;
+-(void)insertObject:(Person*)person inEmployeesAtIndex:(NSInteger)index;
 -(void)removeObjectFromEmployeesAtIndex:(NSInteger)index;
 
 @end
