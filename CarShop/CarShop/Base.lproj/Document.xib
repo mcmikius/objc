@@ -23,13 +23,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nCa-OL-taB">
-                        <rect key="frame" x="20" y="120" width="467" height="173"/>
+                        <rect key="frame" x="20" y="120" width="468" height="148"/>
                         <clipView key="contentView" id="h8Y-BE-eTI">
-                            <rect key="frame" x="1" y="0.0" width="465" height="172"/>
+                            <rect key="frame" x="1" y="0.0" width="466" height="147"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="H9D-hY-wKG" viewBased="YES" id="2Tw-cS-1CE">
-                                    <rect key="frame" x="0.0" y="0.0" width="508" height="147"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="508" height="122"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <size key="intercellSpacing" width="3" height="2"/>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -64,7 +64,7 @@
                                                             </connections>
                                                         </imageView>
                                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pZT-DV-9bH">
-                                                            <rect key="frame" x="25" y="0.0" width="125" height="17"/>
+                                                            <rect key="frame" x="25" y="0.0" width="124" height="17"/>
                                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" title="Table View Cell" id="nAu-Ly-Vac">
                                                                 <font key="font" metaFont="system"/>
                                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -173,8 +173,8 @@
                                 </tableView>
                             </subviews>
                         </clipView>
-                        <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="0.95348837209302328" horizontal="YES" id="mUv-DC-zKO">
-                            <rect key="frame" x="1" y="156" width="465" height="16"/>
+                        <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="0.97619047619047616" horizontal="YES" id="mUv-DC-zKO">
+                            <rect key="frame" x="1" y="131" width="466" height="16"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="vig-PN-RaC">
@@ -218,13 +218,13 @@
                         </connections>
                     </levelIndicator>
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iJL-vJ-BXW">
-                        <rect key="frame" x="368" y="17" width="122" height="79"/>
+                        <rect key="frame" x="368" y="17" width="124" height="79"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="73" id="4Tu-2e-lWp"/>
                         </constraints>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" id="bVY-iR-nLU"/>
+                        <imageCell key="cell" selectable="YES" editable="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" id="bVY-iR-nLU"/>
                         <connections>
-                            <binding destination="OJN-5o-o5U" name="value" keyPath="selection.datePurchased" id="TbM-4z-BDC"/>
+                            <binding destination="OJN-5o-o5U" name="value" keyPath="selection.photo" id="pzR-27-iMj"/>
                         </connections>
                     </imageView>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kgn-ib-C95">
