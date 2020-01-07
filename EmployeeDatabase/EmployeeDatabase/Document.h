@@ -11,6 +11,7 @@
 
 @interface Document : NSDocument {
     NSMutableArray * employees;
+    IBOutlet NSTableView * tableView;
 }
 
 -(void)setEmployees: (NSMutableArray *) empl;
