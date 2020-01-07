@@ -12,7 +12,21 @@
 
 @end
 
+static void *RMDocumentKVOContext;
+
 @implementation Document
+
+- (void)startObservingPerson:(Person *)person {
+    
+    [person addObserver:self forKeyPath:@"name" options:NSKeyValueObservingOptionOld context:RMDocumentKVOContext];
+    
+    [person addObserver:self forKeyPath:@"raise" options:NSKeyValueObservingOptionOld context:RMDocumentKVOContext];
+}
+
+- (void)stopObservingPerson:(Person *)person {
+    [person removeObserver:self forKeyPath:@"name"];
+    [person removeObserver:self forKeyPath:@"raise"];
+}
 
 - (instancetype)init {
     self = [super init];
@@ -26,9 +40,9 @@
     return YES;
 }
 
-- (void)setEmployees:(NSMutableArray *)employees {
-    if (employees != employees) {
-        employees = employees;
+- (void)setEmployees:(NSMutableArray *)empl {
+    if (employees != empl) {
+        employees = empl;
     }
 }
 
