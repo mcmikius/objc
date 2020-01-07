@@ -8,9 +8,6 @@
 
 #import "Document.h"
 
-@interface Document ()
-
-@end
 
 static void *RMDocumentKVOContext;
 
@@ -114,7 +111,7 @@ static void *RMDocumentKVOContext;
     [[undo prepareWithInvocationTarget:self] changeKeyPath:keyPath ofObject:object toValue:oldValue];
     
     [undo setActionName:@"Edit"];
-        
+    
 }
 
 @end
