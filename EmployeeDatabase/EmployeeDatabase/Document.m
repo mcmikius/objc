@@ -42,7 +42,13 @@ static void *RMDocumentKVOContext;
 
 - (void)setEmployees:(NSMutableArray *)empl {
     if (employees != empl) {
+        for (Person * person in employees) {
+            [self stopObservingPerson:person];
+        }
         employees = empl;
+        for (Person *person in employees) {
+            [self startObservingPerson:person];
+        }
     }
 }
 
@@ -75,6 +81,7 @@ static void *RMDocumentKVOContext;
     if (![undo isUndoing]) {
         [undo setActionName:@"Add person"];
     }
+    [self startObservingPerson:person];
     [employees insertObject:person atIndex:index];
 }
 
@@ -85,7 +92,10 @@ static void *RMDocumentKVOContext;
     if (![undo isUndoing]) {
         [undo setActionName:@"Remove person"];
     }
+    [self stopObservingPerson:person];
     [employees removeObjectAtIndex:index];
 }
+
+
 
 @end
