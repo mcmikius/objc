@@ -16,11 +16,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    _displayTextField.text = [NSString stringWithFormat:@"0"];
 }
 
 
 - (IBAction)numberButton:(id)sender {
+    if (!numberString) {
+        numberString = [NSString stringWithFormat:@"%d", [sender tag]];
+    } else numberString = [NSString stringWithFormat:@"%@%d", numberString, [sender tag]];
+    _displayTextField.text = [NSString stringWithFormat:@"%@", numberString];
 }
 
 - (IBAction)functionButton:(id)sender {
