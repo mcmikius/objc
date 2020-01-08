@@ -29,12 +29,18 @@ static void *RMDocumentKVOContext;
     self = [super init];
     if (self) {
         employees = [[NSMutableArray alloc] init];
+        NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
+        [notificationCenter addObserver:self selector:@selector(handleColorChange:) name:MCColorChangeNotification object:nil];
     }
     return self;
 }
 
 + (BOOL)autosavesInPlace {
     return YES;
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)setEmployees:(NSMutableArray *)empl {
@@ -123,6 +129,11 @@ static void *RMDocumentKVOContext;
     
     [undo setActionName:@"Edit"];
     
+}
+
+- (void)handleColorChange:(NSNotification *)notification {
+    NSColor *color = [[notification userInfo] objectForKey:@"color"];
+    [tableView setBackgroundColor:color];
 }
 
 @end

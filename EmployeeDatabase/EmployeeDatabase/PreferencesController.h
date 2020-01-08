@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 extern NSString *const MCTableBgColorKey;
 extern NSString *const MCEmptyDocKey;
 
+extern NSString *const MCColorChangeNotification;
+
 @interface PreferencesController : NSWindowController {
     IBOutlet NSColorWell *colorWell;
     __weak IBOutlet NSButton *checkBox;

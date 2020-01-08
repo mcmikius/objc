@@ -16,6 +16,7 @@
 
 NSString *const MCTableBgColorKey = @"MCTableBgColorKey";
 NSString *const MCEmptyDocKey = @"MCEmptyDocKey";
+NSString *const MCColorChangeNotification = @"MCColorChangeNotification";
 
 + (void) initialize {
     NSMutableDictionary *defaultValues = [NSMutableDictionary dictionary];
@@ -59,8 +60,10 @@ NSString *const MCEmptyDocKey = @"MCEmptyDocKey";
 }
 
 - (IBAction)changedBackgroundColor:(id)sender {
-    NSColor *color = [colorWell color];
-    [PreferencesController setPreferenceTableBgColor:color];
+    [PreferencesController setPreferenceTableBgColor:[colorWell color]];
+    NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
+    NSDictionary *dictionary = [NSDictionary dictionaryWithObject:[colorWell color] forKey:@"color"];
+    [notificationCenter postNotificationName:MCColorChangeNotification object:self userInfo:dictionary];
 }
 - (IBAction)changeNewEmptyDoc:(id)sender {
     [PreferencesController setPreferenceEmptyDoc:[checkBox state]];
