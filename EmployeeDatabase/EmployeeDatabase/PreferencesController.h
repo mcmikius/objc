@@ -10,6 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+extern NSString *const MCTableBgColorKey;
+extern NSString *const MCEmptyDocKey;
+
 @interface PreferencesController : NSWindowController {
     IBOutlet NSColorWell *colorWell;
     

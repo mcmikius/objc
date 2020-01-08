@@ -14,6 +14,18 @@
 
 @implementation PreferencesController
 
+NSString *const MCTableBgColorKey = @"MCTableBgColorKey";
+NSString *const MCEmptyDocKey = @"MCEmptyDocKey";
+
++ (void) initialize {
+    NSMutableDictionary *defaultValues = [NSMutableDictionary dictionary];
+    NSData *colorAsData = [NSKeyedArchiver archivedDataWithRootObject:[NSColor yellowColor]];
+    [defaultValues setObject:colorAsData forKey:MCTableBgColorKey];
+    [defaultValues setObject:[NSNumber numberWithBool:YES] forKey:MCEmptyDocKey];
+    
+    [[NSUserDefaults standardUserDefaults] registerDefaults:defaultValues];
+}
+
 - (id) init {
     self = [super initWithWindowNibName:@"Preferences"];
     return self;
