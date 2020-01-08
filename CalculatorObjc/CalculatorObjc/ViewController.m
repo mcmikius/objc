@@ -82,6 +82,9 @@
         firstNumber = firstNumber * secondNumber;
     }
     _displayTextField.text = [NSString stringWithFormat:@"%d", firstNumber];
-    
+    secondNumber = 0;
+    firstNumber = 0;
+    function = 0;
+    numberString = nil;
 }
 @end
