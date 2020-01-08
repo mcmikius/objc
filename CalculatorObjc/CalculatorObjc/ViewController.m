@@ -23,13 +23,25 @@
 - (IBAction)numberButton:(id)sender {
     if (!numberString) {
         numberString = [NSString stringWithFormat:@"%d", [sender tag]];
-    } else numberString = [NSString stringWithFormat:@"%@%d", numberString, [sender tag]];
-    _displayTextField.text = [NSString stringWithFormat:@"%@", numberString];
+    } else {
+        numberString = [NSString stringWithFormat:@"%@%d", numberString, [sender tag]];
+        _displayTextField.text = [NSString stringWithFormat:@"%@", numberString];
+    }
 }
 
 - (IBAction)functionButton:(id)sender {
+    if (function == 0) {
+        firstNumber = [numberString intValue];
+        numberString = nil;
+        _displayTextField.text = [NSString stringWithFormat:@"%d", firstNumber];
+    } else {
+        secondNumber = [numberString intValue];
+        _displayTextField.text = [NSString stringWithFormat:@"0"];
+        numberString = nil;
+    }
 }
 
 - (IBAction)calculateResult:(id)sender {
+    
 }
 @end
