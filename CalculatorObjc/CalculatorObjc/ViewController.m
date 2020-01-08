@@ -38,6 +38,18 @@
         secondNumber = [numberString intValue];
         _displayTextField.text = [NSString stringWithFormat:@"0"];
         numberString = nil;
+        
+        if (function == 10) {
+            firstNumber = firstNumber + secondNumber;
+        } else if (function == 11) {
+            firstNumber = firstNumber - secondNumber;
+        } else if (function == 12) {
+            firstNumber = firstNumber / secondNumber;
+        } else if (function == 13) {
+            firstNumber = firstNumber * secondNumber;
+        }
+        _displayTextField.text = [NSString stringWithFormat:@"%d", firstNumber];
+        
     }
 }
 
