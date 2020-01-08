@@ -34,7 +34,8 @@ NSString *const MCEmptyDocKey = @"MCEmptyDocKey";
 - (void)windowDidLoad {
     [super windowDidLoad];
     
-    // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
+    [colorWell setColor:[PreferencesController preferenceTableBgColor]];
+    [checkBox setState:[PreferencesController preferenceEmptyDoc]];
 }
 
 + (NSColor*)preferenceTableBgColor {
@@ -58,7 +59,11 @@ NSString *const MCEmptyDocKey = @"MCEmptyDocKey";
 }
 
 - (IBAction)changedBackgroundColor:(id)sender {
-    
+    NSColor *color = [colorWell color];
+    [PreferencesController setPreferenceTableBgColor:color];
+}
+- (IBAction)changeNewEmptyDoc:(id)sender {
+    [PreferencesController setPreferenceEmptyDoc:[checkBox state]];
 }
 
 @end

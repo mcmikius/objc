@@ -15,6 +15,7 @@ extern NSString *const MCEmptyDocKey;
 
 @interface PreferencesController : NSWindowController {
     IBOutlet NSColorWell *colorWell;
+    __weak IBOutlet NSButton *checkBox;
     
 }
 
@@ -24,7 +25,7 @@ extern NSString *const MCEmptyDocKey;
 + (void)setPreferenceEmptyDoc:(BOOL)emptyDoc;
 
 - (IBAction)changedBackgroundColor:(id)sender;
-
+- (IBAction)changeNewEmptyDoc:(id)sender;
 
 
 @end

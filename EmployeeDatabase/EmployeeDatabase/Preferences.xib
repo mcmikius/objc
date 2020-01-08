@@ -7,6 +7,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="PreferencesController">
             <connections>
+                <outlet property="checkBox" destination="cW0-VK-klJ" id="RrY-hi-A24"/>
                 <outlet property="colorWell" destination="psz-9v-ib9" id="drN-Sr-MwO"/>
                 <outlet property="window" destination="A8S-k8-asM" id="QRf-wN-F9a"/>
             </connections>
@@ -47,6 +48,9 @@
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="message"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="changeNewEmptyDoc:" target="-2" id="7VA-ws-6hl"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>
