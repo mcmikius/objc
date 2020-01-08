@@ -37,6 +37,26 @@ NSString *const MCEmptyDocKey = @"MCEmptyDocKey";
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
 }
 
++ (NSColor*)preferenceTableBgColor {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSData *colorAsData = [defaults objectForKey:MCTableBgColorKey];
+    return [NSKeyedUnarchiver unarchiveObjectWithData:colorAsData];
+}
+
++ (void)setPreferenceTableBgColor:(NSColor *)color {
+    NSData *colorAsData = [NSKeyedArchiver archivedDataWithRootObject:color];
+    [[NSUserDefaults standardUserDefaults] setObject:colorAsData forKey:MCTableBgColorKey];
+}
+
++ (BOOL)preferenceEmptyDoc {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    return [defaults boolForKey:MCEmptyDocKey];
+}
+
++ (void)setPreferenceEmptyDoc:(BOOL)emptyDoc {
+    [[NSUserDefaults standardUserDefaults] setBool:emptyDoc forKey:MCEmptyDocKey];
+}
+
 - (IBAction)changedBackgroundColor:(id)sender {
     
 }

@@ -18,7 +18,14 @@ extern NSString *const MCEmptyDocKey;
     
 }
 
++ (NSColor *)preferenceTableBgColor;
++ (void)setPreferenceTableBgColor:(NSColor*)color;
++ (BOOL)preferenceEmptyDoc;
++ (void)setPreferenceEmptyDoc:(BOOL)emptyDoc;
+
 - (IBAction)changedBackgroundColor:(id)sender;
+
+
 
 @end
 
