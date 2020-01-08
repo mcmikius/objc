@@ -20,4 +20,12 @@
 }
 
 
+- (IBAction)numberButton:(id)sender {
+}
+
+- (IBAction)functionButton:(id)sender {
+}
+
+- (IBAction)calculateResult:(id)sender {
+}
 @end
