@@ -11,6 +11,10 @@
 
 @implementation AppController
 
+- (BOOL)applicationShouldOpenUntitledFilr:(NSApplication*)sender {
+    return [PreferencesController preferenceEmptyDoc];
+}
+
 -(IBAction) showPreferencesPanel:(id)sender {
     if (!preferences) {
         preferences = [[PreferencesController alloc] init];
