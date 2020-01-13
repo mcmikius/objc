@@ -43,7 +43,7 @@
     [[NSColor greenColor] set];
     [NSBezierPath fillRect:bounds];
     [[NSColor whiteColor]set];
-    [path stroke];
+    [path fill];
 }
 
 @end
