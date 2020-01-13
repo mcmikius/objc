@@ -16,7 +16,11 @@
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    // Insert code here to initialize your application
+    NSView *superView = [_window contentView];
+    NSRect frame = NSMakeRect(10, 10, 120, 120);
+    NSButton *button = [[NSButton alloc]initWithFrame:frame];
+    [button setTitle:@"Goodbye!"];
+    [superView addSubview:button];
 }
 
 
