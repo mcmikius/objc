@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  EmployeeDatabase
+
+  Created by Mykhailo Bondarenko on 13.01.2020.
+  Copyright © 2020 Mykhailo Bondarenko. All rights reserved.
+*/
+
+"REMOVE_MSG" = "Вы действительно хотите удалить людей?";
+"REMOVE_INF" = "%ld людей будет удалено";
+"REMOVE" = "Удалить";
+"CANCEL" = "Отмена";

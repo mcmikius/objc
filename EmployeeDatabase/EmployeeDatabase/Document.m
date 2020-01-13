@@ -133,7 +133,7 @@ static void *RMDocumentKVOContext;
 
 - (IBAction)removeEmployees:(id)sender {
     NSArray *selected = [employeesController selectedObjects];
-    NSAlert *alert = [NSAlert alertWithMessageText:@"Do you really want to remove item?" defaultButton:@"Yes" alternateButton:@"Cancel" otherButton:nil informativeTextWithFormat:@"%ld people will be removed", [selected count]];
+    NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"REMOVE_MSG", "Remove") defaultButton:NSLocalizedString(@"REMOVE", "Remove") alternateButton:NSLocalizedString(@"CANCEL", "Cancel") otherButton:nil informativeTextWithFormat:NSLocalizedString(@"REMOVE_INF", "Remove info"), [selected count]];
     [alert beginSheetModalForWindow:[tableView window] modalDelegate:self didEndSelector:@selector(alertEnded:code:context:) contextInfo:NULL];
 }
 

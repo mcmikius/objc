@@ -1,0 +1,18 @@
+
+/* Class = "NSButtonCell"; title = "Add new"; ObjectID = "7kp-wY-Vpt"; */
+"7kp-wY-Vpt.title" = "Добавить";
+
+/* Class = "NSTextFieldCell"; title = "Your document contents here"; ObjectID = "JDq-Ah-v2f"; */
+"JDq-Ah-v2f.title" = "Your document contents here";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "iWG-0D-F3L"; */
+"iWG-0D-F3L.title" = "Text Cell";
+
+/* Class = "NSButtonCell"; title = "Remove"; ObjectID = "lKl-7y-Ni4"; */
+"lKl-7y-Ni4.title" = "Удалить";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "x5e-c9-Jrr"; */
+"x5e-c9-Jrr.title" = "Text Cell";
+
+/* Class = "NSWindow"; title = "Window"; ObjectID = "xOd-HO-29H"; */
+"xOd-HO-29H.title" = "Window";
