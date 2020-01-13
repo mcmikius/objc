@@ -131,6 +131,18 @@ static void *RMDocumentKVOContext;
     
 }
 
+- (IBAction)removeEmployees:(id)sender {
+    NSArray *selected = [employeesController selectedObjects];
+    NSAlert *alert = [NSAlert alertWithMessageText:@"Do you really want to remove item?" defaultButton:@"Yes" alternateButton:@"Cancel" otherButton:nil informativeTextWithFormat:@"%ld people will be removed", [selected count]];
+    [alert beginSheetModalForWindow:[tableView window] modalDelegate:self didEndSelector:@selector(alertEnded:code:context:) contextInfo:NULL];
+}
+
+- (void)alertEnded:(NSAlert*)alert code:(NSInteger)choice choicecontext:(void*)v {
+    if (choice == NSAlertDefaultReturn) {
+        [employeesController remove:nil];
+    }
+}
+
 - (void)handleColorChange:(NSNotification *)notification {
     NSColor *color = [[notification userInfo] objectForKey:@"color"];
     [tableView setBackgroundColor:color];

@@ -12,12 +12,19 @@
 @interface Document : NSDocument {
     NSMutableArray * employees;
     IBOutlet NSTableView * tableView;
+    
+    IBOutlet NSArrayController *employeesController;
+    
 }
+
+-(IBAction)removeEmployees:(id)sender;
 
 -(void)setEmployees: (NSMutableArray *) empl;
 
 -(void)insertObject:(Person*)person inEmployeesAtIndex:(NSInteger)index;
 -(void)removeObjectFromEmployeesAtIndex:(NSInteger)index;
+
+
 
 @end
 

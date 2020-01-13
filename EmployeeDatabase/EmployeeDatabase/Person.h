@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Person : NSObject <NSCoding>
+@interface Person : NSObject <NSCoding> 
 @property NSString * name;
 @property float raise;
 @end
