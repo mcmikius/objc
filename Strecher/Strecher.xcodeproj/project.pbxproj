@@ -11,6 +11,7 @@
 		F36BC9BD23CC73C700A4E27E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F36BC9BC23CC73C700A4E27E /* Assets.xcassets */; };
 		F36BC9C023CC73C700A4E27E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F36BC9BE23CC73C700A4E27E /* MainMenu.xib */; };
 		F36BC9C323CC73C700A4E27E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F36BC9C223CC73C700A4E27E /* main.m */; };
+		F36BC9CC23CC740B00A4E27E /* StretchView.m in Sources */ = {isa = PBXBuildFile; fileRef = F36BC9CB23CC740B00A4E27E /* StretchView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,8 @@
 		F36BC9C123CC73C700A4E27E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F36BC9C223CC73C700A4E27E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F36BC9C423CC73C700A4E27E /* Strecher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Strecher.entitlements; sourceTree = "<group>"; };
+		F36BC9CA23CC740B00A4E27E /* StretchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StretchView.h; sourceTree = "<group>"; };
+		F36BC9CB23CC740B00A4E27E /* StretchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StretchView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +64,8 @@
 				F36BC9C123CC73C700A4E27E /* Info.plist */,
 				F36BC9C223CC73C700A4E27E /* main.m */,
 				F36BC9C423CC73C700A4E27E /* Strecher.entitlements */,
+				F36BC9CA23CC740B00A4E27E /* StretchView.h */,
+				F36BC9CB23CC740B00A4E27E /* StretchView.m */,
 			);
 			path = Strecher;
 			sourceTree = "<group>";
@@ -136,6 +141,7 @@
 			files = (
 				F36BC9C323CC73C700A4E27E /* main.m in Sources */,
 				F36BC9BB23CC73C600A4E27E /* AppDelegate.m in Sources */,
+				F36BC9CC23CC740B00A4E27E /* StretchView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
