@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
     NSBezierPath *path;
     NSImage *image;
     float opacity;
+    NSPoint downPoint;
+    NSPoint currentPoint;
 }
 
 - (NSPoint) randomPoint;
