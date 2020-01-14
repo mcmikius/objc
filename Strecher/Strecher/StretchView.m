@@ -13,6 +13,7 @@
 - (id)initWithFrame:(NSRect)frameRect {
     self = [super initWithFrame:frameRect];
     if (self) {
+        opacity = 1.0;
         srandom((unsigned)time(NULL));
         path = [NSBezierPath bezierPath];
         [path setLineWidth:3.0];
@@ -26,6 +27,24 @@
         [path closePath];
     }
     return self;
+}
+
+- (float)opacity {
+    return opacity;
+}
+
+- (void)setOpacity:(float)x {
+    opacity = x;
+    [self setNeedsDisplay:YES];
+}
+
+- (NSImage*) image {
+    return image;
+}
+
+- (void) setImage:(NSImage*)newImage {
+    image = newImage;
+    [self setNeedsDisplay:YES];
 }
 
 - (NSPoint) randomPoint {
@@ -44,6 +63,14 @@
     [NSBezierPath fillRect:bounds];
     [[NSColor whiteColor]set];
     [path fill];
+    
+    if (image) {
+        NSRect imageRect;
+        imageRect.origin = NSZeroPoint;
+        imageRect.size = [image size];
+        NSRect drawingRect = imageRect;
+        [image drawInRect:drawingRect fromRect:imageRect operation:NSCompositingOperationSourceOver fraction:opacity];
+    }
 }
 
 @end

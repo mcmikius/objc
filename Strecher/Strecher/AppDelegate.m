@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "StretchView.h"
 
 @interface AppDelegate ()
 
@@ -26,6 +27,18 @@
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     // Insert code here to tear down your application
+}
+
+- (IBAction)showOpenPanel:(id)sender {
+    __block NSOpenPanel *panel = [NSOpenPanel openPanel];
+    [panel setAllowedFileTypes:[NSImage imageTypes]];
+    [panel beginSheetModalForWindow:[stretchView window] completionHandler:^(NSInteger result) {
+        if (result == NSModalResponseOK) {
+            NSImage *image = [[NSImage alloc] initWithContentsOfURL:[panel URL]];
+            [self->stretchView setImage: image];
+        }
+        panel = nil;
+    }];
 }
 
 

@@ -12,9 +12,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface StretchView : NSView {
     NSBezierPath *path;
+    NSImage *image;
+    float opacity;
 }
 
 - (NSPoint) randomPoint;
+@property (assign) float opacity;
+@property (strong) NSImage *image;
 
 @end
 
