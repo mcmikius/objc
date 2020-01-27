@@ -10,7 +10,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BigLetterView : NSView
+@interface BigLetterView : NSView {
+    NSColor *bgColor;
+    NSString *string;
+}
+
+@property (strong) NSColor *bgColor;
+@property (copy) NSString *string;
 
 @end
 

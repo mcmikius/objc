@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11134" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -10,8 +11,8 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application" customClass="NSApplication"/>
-        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="">
+        <customObject id="-3" userLabel="Application"/>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
@@ -677,16 +678,67 @@
                     </menu>
                 </menuItem>
             </items>
+            <point key="canvasLocation" x="139" y="154"/>
         </menu>
         <window title="KeyBoard" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="480" height="360"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1050"/>
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="4u0-iE-U2x" customClass="BigLetterView">
+                        <rect key="frame" x="20" y="49" width="440" height="291"/>
+                        <connections>
+                            <outlet property="nextKeyView" destination="5e2-UK-8km" id="5Dr-tv-801"/>
+                        </connections>
+                    </customView>
+                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5e2-UK-8km">
+                        <rect key="frame" x="20" y="20" width="96" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="96" id="ECN-lK-MrF"/>
+                        </constraints>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="aZb-Ql-8hR">
+                            <font key="font" usesAppearanceFont="YES"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                        <connections>
+                            <outlet property="nextKeyView" destination="JYD-4k-UYt" id="78w-Vm-IGJ"/>
+                        </connections>
+                    </textField>
+                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JYD-4k-UYt">
+                        <rect key="frame" x="364" y="20" width="96" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="96" id="gHc-Fg-UpD"/>
+                        </constraints>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="h4K-F6-o88">
+                            <font key="font" usesAppearanceFont="YES"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                        <connections>
+                            <outlet property="nextKeyView" destination="4u0-iE-U2x" id="BGs-y4-0J8"/>
+                        </connections>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="5e2-UK-8km" secondAttribute="bottom" constant="20" id="0pl-Mh-ZdD"/>
+                    <constraint firstAttribute="trailing" secondItem="JYD-4k-UYt" secondAttribute="trailing" constant="20" id="18h-FP-656"/>
+                    <constraint firstAttribute="bottom" secondItem="JYD-4k-UYt" secondAttribute="bottom" constant="20" id="E9O-Yb-vHJ"/>
+                    <constraint firstItem="5e2-UK-8km" firstAttribute="top" secondItem="4u0-iE-U2x" secondAttribute="bottom" constant="8" id="H1S-hC-RZH"/>
+                    <constraint firstItem="4u0-iE-U2x" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="20" id="NJj-IG-0gY"/>
+                    <constraint firstItem="4u0-iE-U2x" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" id="RcB-7n-A6L"/>
+                    <constraint firstAttribute="trailing" secondItem="4u0-iE-U2x" secondAttribute="trailing" constant="20" id="eqT-nG-08h"/>
+                    <constraint firstItem="5e2-UK-8km" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" id="zgD-RD-Bwm"/>
+                </constraints>
             </view>
+            <connections>
+                <outlet property="initialFirstResponder" destination="5e2-UK-8km" id="22b-WZ-ly7"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="-120"/>
         </window>
     </objects>
 </document>
