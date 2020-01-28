@@ -74,8 +74,8 @@
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
     if (!currentString) {
         currentString = [[NSMutableString alloc]init];
-        [currentString appendString:string];
     }
+    [currentString appendString:string];
 }
 
 @end

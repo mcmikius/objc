@@ -18,14 +18,26 @@
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    [tableView setTarget:self];
+    [tableView setDoubleAction:@selector(openClass)];
+    
     ScheduledFetcher *fetcher = [[ScheduledFetcher alloc]init];
     NSError *error = nil;
-    [fetcher fetchClassesWithError:&error];
+    classes = [fetcher fetchClassesWithError:&error];
+    [tableView reloadData];
 }
 
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     // Insert code here to tear down your application
+}
+
+-(void)openClass:(id)sender {
+    ScheduledClass *c = [classes objectAtIndex:[tableView clickedRow]];
+    NSURL *baseURL = [NSURL URLWithString:@"http://bignerdranch.com/"];
+    NSURL *url = [NSURL URLWithString:[c href] relativeToURL:baseURL];
+    
+    [[NSWorkspace sharedWorkspace] openURL:url];
 }
 
 - (NSInteger) numberOfRowsInTableView:(NSTableView*)theTableView {
