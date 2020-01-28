@@ -21,7 +21,7 @@
 }
 
 - (void)drawRect:(NSRect)dirtyRect {
-    [super drawRect:dirtyRect];
+//    [super drawRect:dirtyRect];
     
     NSRect bound = [self bounds];
     [bgColor set];
@@ -100,6 +100,39 @@
         }
         panel = nil;
     }];
+}
+
+- (void)writeToPasteboard:(NSPasteboard *)pb {
+    [pb clearContents];
+    [pb writeObjects:[NSArray arrayWithObject:string]];
+}
+
+- (BOOL)readFromPasteboard: (NSPasteboard *)pb {
+    NSArray *classes = [NSArray arrayWithObject:[NSString class]];
+    NSArray *objects = [pb readObjectsForClasses:classes options:nil];
+    if ([objects count] > 0) {
+        NSString *value = [objects objectAtIndex:0];
+        if ([value length] == 1) {
+            [self setString:value];
+            return YES;
+        }
+    }
+    return NO;
+}
+
+- (IBAction)cut:(id)sender {
+    [self copy:sender];
+    [self setString:@""];
+}
+
+- (IBAction)copy:(id)sender {
+    NSPasteboard *pb = [NSPasteboard generalPasteboard];
+    [self writeToPasteboard:pb];
+}
+
+- (IBAction)paste:(id)sender {
+    NSPasteboard *pb = [NSPasteboard generalPasteboard];
+    [self readFromPasteboard:pb];
 }
 
 @end

@@ -144,17 +144,17 @@
                             <menuItem isSeparatorItem="YES" id="WRV-NI-Exz"/>
                             <menuItem title="Cut" keyEquivalent="x" id="uRl-iY-unG">
                                 <connections>
-                                    <action selector="cut:" target="-1" id="YJe-68-I9s"/>
+                                    <action selector="cut:" target="4u0-iE-U2x" id="ees-xk-YF5"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="Copy" keyEquivalent="c" id="x3v-GG-iWU">
                                 <connections>
-                                    <action selector="copy:" target="-1" id="G1f-GL-Joy"/>
+                                    <action selector="copy:" target="4u0-iE-U2x" id="2Gc-IT-L7e"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="Paste" keyEquivalent="v" id="gVA-U4-sdL">
                                 <connections>
-                                    <action selector="paste:" target="-1" id="UvS-8e-Qdg"/>
+                                    <action selector="paste:" target="4u0-iE-U2x" id="faK-v9-bWF"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="Paste and Match Style" keyEquivalent="V" id="WeT-3V-zwk">
