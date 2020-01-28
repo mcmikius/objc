@@ -135,4 +135,32 @@
     [self readFromPasteboard:pb];
 }
 
+- (void)mouseDown:(NSEvent *)event {
+    mouseDownEvent = event;
+}
+
+- (void)mouseDragged:(NSEvent *)event {
+    NSPoint down = [mouseDownEvent locationInWindow];
+    NSPoint drag = [event locationInWindow];
+    float distance = hypot(down.x - drag.x, down.y - drag.y);
+    if (distance < 3 || [string length] == 0) {
+        return;
+    }
+    NSSize s = [string sizeWithAttributes:attr];
+    NSImage *anImage = [[NSImage alloc]initWithSize:s];
+    NSRect imageBounds;
+    imageBounds.origin = NSZeroPoint;
+    imageBounds.size = s;
+    [anImage lockFocus];
+    [self drawStringCenteredIn:imageBounds];
+    [anImage unlockFocus];
+    
+    NSPoint p = [self convertPoint:down fromView:nil];
+    p.x = p.x - s.width/2;
+    p.y = p.y - s.height/2;
+    NSPasteboard *pb = [NSPasteboard pasteboardWithName:NSPasteboardNameDrag];
+    [self writeToPasteboard:pb];
+    [self dragImage:anImage at:p offset:NSZeroSize event:mouseDownEvent pasteboard:pb source:self slideBack:YES];
+}
+
 @end

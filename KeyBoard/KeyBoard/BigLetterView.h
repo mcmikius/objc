@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
     NSColor *bgColor;
     NSString *string;
     NSMutableDictionary *attr;
+    NSEvent *mouseDownEvent;
 }
 
 - (void)prepareAttributes;
@@ -22,6 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (IBAction)cut:(id)sender;
 - (IBAction)copy:(id)sender;
 - (IBAction)paste:(id)sender;
+
+
 
 @property (strong) NSColor *bgColor;
 @property (copy) NSString *string;
