@@ -84,4 +84,22 @@
     [attr setObject:[NSColor yellowColor] forKey:NSForegroundColorAttributeName];
 }
 
+- (IBAction)savePDF:(id)sender {
+    __block NSSavePanel *panel = [NSSavePanel savePanel];
+    [panel setAllowedFileTypes:[NSArray arrayWithObject:@"pdf"]];
+    [panel beginSheetModalForWindow:[self window] completionHandler:^(NSInteger result) {
+        if (result == NSModalResponseOK) {
+            NSRect r = [self bounds];
+            NSData *data = [self dataWithPDFInsideRect: r];
+            NSError *error;
+            BOOL succesful = [data writeToURL:[panel URL] options:0 error:& error];
+            if (!succesful) {
+                NSAlert *alert = [NSAlert alertWithError:error];
+                [alert runModal];
+            }
+        }
+        panel = nil;
+    }];
+}
+
 @end
