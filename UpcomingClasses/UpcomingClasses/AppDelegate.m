@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ScheduledFetcher.h"
+#import "ScheduledClass.h"
 
 @interface AppDelegate ()
 
@@ -27,5 +28,13 @@
     // Insert code here to tear down your application
 }
 
+- (NSInteger) numberOfRowsInTableView:(NSTableView*)theTableView {
+    return [classes count];
+}
+
+-(id)tableView:(NSTableView*)theTableView objectValueForTableColumn:(nullable NSTableColumn *)tableColumn row:(NSInteger)row {
+    ScheduledClass *c = [classes objectAtIndex:row];
+    return [c valueForKey:[tableColumn identifier]];
+}
 
 @end
