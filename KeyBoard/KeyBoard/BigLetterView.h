@@ -13,7 +13,10 @@ NS_ASSUME_NONNULL_BEGIN
 @interface BigLetterView : NSView {
     NSColor *bgColor;
     NSString *string;
+    NSMutableDictionary *attr;
 }
+
+- (void)prepareAttributes;
 
 @property (strong) NSColor *bgColor;
 @property (copy) NSString *string;

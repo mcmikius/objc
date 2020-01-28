@@ -15,6 +15,7 @@
     if (self) {
         bgColor = [NSColor blueColor];
         string = @"";
+        [self prepareAttributes];
     }
     return self;
 }
@@ -30,6 +31,7 @@
         [NSBezierPath setDefaultLineWidth:5.0];
         [NSBezierPath strokeRect:bound];
     }
+    [self drawStringCenteredIn:bound];
 }
 
 - (BOOL)isOpaque {return YES;}
@@ -43,7 +45,6 @@
 
 - (void)insertText:(id)insertString {
     [self setString:insertString];
-    
 }
 
 - (void)insertTab:(id)sender {
@@ -57,7 +58,6 @@
 
 - (NSColor*)bgColor {
     return bgColor;
-    
 }
 
 - (void)setString:(NSString *)newString {
@@ -65,8 +65,23 @@
     NSLog(@"%@", string);
     [self setNeedsDisplay:YES];
 }
+
 - (NSString *)string {
     return string;
+}
+
+- (void)drawStringCenteredIn:(NSRect)r {
+    NSSize strSize = [string sizeWithAttributes:attr];
+    NSPoint strOrigin;
+    strOrigin.x = r.origin.x + (r.size.width - strSize.width)/2;
+    strOrigin.y = r.origin.y + (r.size.height - strSize.height)/2;
+    [string drawAtPoint:strOrigin withAttributes:attr];
+}
+
+- (void)prepareAttributes {
+    attr = [NSMutableDictionary dictionary];
+    [attr setObject:[NSFont userFontOfSize:80] forKey:NSFontAttributeName];
+    [attr setObject:[NSColor yellowColor] forKey:NSForegroundColorAttributeName];
 }
 
 @end
