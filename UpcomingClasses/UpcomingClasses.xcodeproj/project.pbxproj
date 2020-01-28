@@ -11,6 +11,8 @@
 		F39E689A23E03D9D00120E40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F39E689923E03D9D00120E40 /* Assets.xcassets */; };
 		F39E689D23E03D9D00120E40 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F39E689B23E03D9D00120E40 /* MainMenu.xib */; };
 		F39E68A023E03D9D00120E40 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F39E689F23E03D9D00120E40 /* main.m */; };
+		F39E68AA23E0496000120E40 /* ScheduledClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F39E68A923E0496000120E40 /* ScheduledClass.m */; };
+		F39E68AD23E049EE00120E40 /* ScheduledFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = F39E68AC23E049EE00120E40 /* ScheduledFetcher.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,10 @@
 		F39E689E23E03D9D00120E40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F39E689F23E03D9D00120E40 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F39E68A123E03D9D00120E40 /* UpcomingClasses.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UpcomingClasses.entitlements; sourceTree = "<group>"; };
+		F39E68A823E0496000120E40 /* ScheduledClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScheduledClass.h; sourceTree = "<group>"; };
+		F39E68A923E0496000120E40 /* ScheduledClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScheduledClass.m; sourceTree = "<group>"; };
+		F39E68AB23E049EE00120E40 /* ScheduledFetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScheduledFetcher.h; sourceTree = "<group>"; };
+		F39E68AC23E049EE00120E40 /* ScheduledFetcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScheduledFetcher.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,10 @@
 			children = (
 				F39E689623E03D9B00120E40 /* AppDelegate.h */,
 				F39E689723E03D9B00120E40 /* AppDelegate.m */,
+				F39E68A823E0496000120E40 /* ScheduledClass.h */,
+				F39E68A923E0496000120E40 /* ScheduledClass.m */,
+				F39E68AB23E049EE00120E40 /* ScheduledFetcher.h */,
+				F39E68AC23E049EE00120E40 /* ScheduledFetcher.m */,
 				F39E689923E03D9D00120E40 /* Assets.xcassets */,
 				F39E689B23E03D9D00120E40 /* MainMenu.xib */,
 				F39E689E23E03D9D00120E40 /* Info.plist */,
@@ -136,6 +146,8 @@
 			files = (
 				F39E68A023E03D9D00120E40 /* main.m in Sources */,
 				F39E689823E03D9B00120E40 /* AppDelegate.m in Sources */,
+				F39E68AA23E0496000120E40 /* ScheduledClass.m in Sources */,
+				F39E68AD23E049EE00120E40 /* ScheduledFetcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

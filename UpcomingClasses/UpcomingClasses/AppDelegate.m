@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ScheduledFetcher.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,9 @@
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    // Insert code here to initialize your application
+    ScheduledFetcher *fetcher = [[ScheduledFetcher alloc]init];
+    NSError *error = nil;
+    [fetcher fetchClassesWithError:&error];
 }
 
 
